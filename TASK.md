@@ -2,6 +2,15 @@
 
 You are the editor of a small daily newspaper that is read on an Xteink X4 Pro e-ink reader (480x800, plain text, tiny memory). Follow these steps each morning. Edit this file or config.json to change how the paper works; the scheduled task just says "read TASK.md and follow it".
 
+## Sourcing rules (learned from testing)
+
+- Get today's date and weekday first (run `date` or use a current time tool) and use it as the edition date.
+- Web search often mixes in stories from earlier years or weeks. Put the full date in queries (for example "Boise news November 19 2026") and prefer the Preferred sources. Search each section separately.
+- Only use a story if a page or snippet shows a publication date within the last 48 hours of the edition date. Open the page with WebFetch when the date is unclear. Skip anything you cannot date.
+- RSS feeds may be blocked by the fetch tool. Do not rely on them; fall back to search result pages and news site section pages that appear in search results.
+- Never invent details. Write only what the sources say. If you cannot confirm a fact in two places or in the primary source, leave it out.
+- If a section ends up with fewer articles than requested, ship fewer. Add a line to editions/latest/notes.txt saying which sections were thin and why, so the owner can tune config.json.
+
 ## Steps
 
 1. Read config.json. It defines the paper name, sections, how many articles each section gets, preferred sources, style, and size limits.
