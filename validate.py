@@ -28,6 +28,13 @@ for key in ("paper", "date", "weekday", "generated_at", "sections"):
     if key not in idx:
         errors.append(f"index.json missing {key}")
 
+brief = idx.get("briefing", "")
+if not brief:
+    errors.append("index.json missing briefing")
+elif len(brief) > lim.get("briefing_chars", 600):
+    errors.append(f"briefing is {len(brief)} chars, max {lim.get('briefing_chars', 600)}")
+ascii_ok("briefing", brief)
+
 seen = set()
 total = idx_path.stat().st_size
 for sec in idx.get("sections", []):
@@ -68,6 +75,17 @@ for sec in idx.get("sections", []):
             ascii_ok(f"{aid} page {i}", pg)
         if not str(art.get("url", "")).startswith("http"):
             errors.append(f"{aid}: missing url")
+        if "url_verified" not in art:
+            errors.append(f"{aid}: missing url_verified")
+        qr = art.get("qr")
+        if qr is not None:
+            n, rows = qr.get("n"), qr.get("rows", [])
+            if art.get("url_verified") is not True:
+                errors.append(f"{aid}: qr present but url not verified")
+            if not isinstance(n, int) or not 21 <= n <= 49 or len(rows) != n:
+                errors.append(f"{aid}: bad qr size")
+            elif any(len(r) != n or set(r) - {"0", "1"} for r in rows):
+                errors.append(f"{aid}: bad qr rows")
 
 extra = {p.stem for p in (ed / "a").glob("*.json")} - seen
 if extra:

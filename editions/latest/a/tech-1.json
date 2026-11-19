@@ -1,11 +1,1 @@
-{
- "id": "tech-1",
- "headline": "OpenAI releases GPT-6.2 Astra and Sol",
- "source": "OpenAI, via The Neuron and Tech Trends News Update",
- "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
- "published": "2026-11-17",
- "pages": [
-  "OpenAI has released two new models, GPT-6.2 Astra and GPT-6.2 Sol. Astra is aimed at demanding work such as software development and scientific research, while Sol is meant for everyday tasks and multi-step agents. Both are available through ChatGPT Work, Codex and the API for eligible users. OpenAI says Astra scored 5.2 points higher than its predecessor on a benchmark called Agents' Last Exam, at under one third of the cost per task. According to the system card, Astra is the first OpenAI model released outside the company to reach its High threshold for AI self-improvement.",
-  "The release matters because it shows how quickly capable AI agents are moving into everyday coding and research tools. Details such as pricing varied between reports.\nSource: OpenAI, via The Neuron and Tech Trends News Update"
- ]
-}
+{"id": "tech-1", "headline": "OpenAI releases GPT-6.2 Astra and Sol", "source": "OpenAI, via The Neuron and Tech Trends News Update", "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/", "published": "2026-11-17", "pages": ["OpenAI has released two new models, GPT-6.2 Astra and GPT-6.2 Sol. Astra is aimed at demanding work such as software development and scientific research, while Sol is meant for everyday tasks and multi-step agents. Both are available through ChatGPT Work, Codex and the API for eligible users. OpenAI says Astra scored 5.2 points higher than its predecessor on a benchmark called Agents' Last Exam, at under one third of the cost per task. According to the system card, Astra is the first OpenAI model released outside the company to reach its High threshold for AI self-improvement.", "The release matters because it shows how quickly capable AI agents are moving into everyday coding and research tools. Details such as pricing varied between reports.\nSource: OpenAI, via The Neuron and Tech Trends News Update"], "url_verified": false}

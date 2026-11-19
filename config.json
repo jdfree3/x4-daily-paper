@@ -1,5 +1,5 @@
 {
-  "paper_name": "The Morning X4",
+  "paper_name": "The Godfrey Gazette",
   "timezone": "America/Denver",
   "sections": [
     {
@@ -51,7 +51,8 @@
     "page_chars": 700,
     "max_pages_per_article": 3,
     "summary_chars": 140,
-    "headline_chars": 80
+    "headline_chars": 80,
+    "briefing_chars": 600
   },
   "fetch_domains": [
     "bbc.com",
@@ -62,5 +63,10 @@
     "kffhealthnews.org",
     "boisestatepublicradio.org",
     "idahostatesman.com"
-  ]
+  ],
+  "briefing": {
+    "label": "Today in brief",
+    "length": "4 to 6 short sentences, about 60 to 90 words",
+    "style": "neutral, covers each section's top story, only facts that appear in the day's articles"
+  }
 }
