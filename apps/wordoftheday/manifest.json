@@ -1,0 +1,16 @@
+{
+  "app_id": "wordoftheday",
+  "display_name": "Word of the Day",
+  "version": "0.1.0",
+  "author": "Josh",
+  "description": "A very hard word each morning, paired with an engraving. Shows today's word, the last 30 days, and can be the lock screen.",
+  "entry": "index.lua",
+  "api": "2.26",
+  "permissions": ["net"],
+  "lockscreen": {
+    "enabled": true,
+    "entry": "lockscreen.lua",
+    "interval_sec": 3600,
+    "net": true
+  }
+}
