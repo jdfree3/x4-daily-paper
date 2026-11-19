@@ -1,11 +1,1 @@
-{
- "id": "tech-4",
- "headline": "AI helps find serious flaw in Java platform",
- "source": "New York Times, via The Neuron and Tech Trends News Update",
- "url": "https://www.nytimes.com/2026/11/17/us/politics/ai-security-bug-java.html",
- "published": "2026-11-17",
- "pages": [
-  "A security company used artificial intelligence to find a serious flaw in Java, the software platform widely used by large businesses, according to reports on Tuesday. One newsletter called the bug Java4Shell and said it was patched the same day. The reports did not give a severity score, a patch version, or a full company name, so those details remain unclear. Just Security also mentioned that an AI firm called Calif found a critical Java flaw, and officials have linked a rush to patch systems ahead of AI-enabled hacking to some recent outages, though Rubio said there was zero evidence the incidents were related.",
-  "The case shows AI tools are now finding major vulnerabilities in everyday software, which can help defenders and attackers alike.\nSource: New York Times, via The Neuron and Tech Trends News Update"
- ]
-}
+{"id": "tech-4", "headline": "AI helps find serious flaw in Java platform", "source": "New York Times, via The Neuron and Tech Trends News Update", "url": "https://www.nytimes.com/2026/11/17/us/politics/ai-security-bug-java.html", "published": "2026-11-17", "pages": ["A security company used artificial intelligence to find a serious flaw in Java, the software platform widely used by large businesses, according to reports on Tuesday. One newsletter called the bug Java4Shell and said it was patched the same day. The reports did not give a severity score, a patch version, or a full company name, so those details remain unclear. Just Security also mentioned that an AI firm called Calif found a critical Java flaw, and officials have linked a rush to patch systems ahead of AI-enabled hacking to some recent outages, though Rubio said there was zero evidence the incidents were related.", "The case shows AI tools are now finding major vulnerabilities in everyday software, which can help defenders and attackers alike.\nSource: New York Times, via The Neuron and Tech Trends News Update"], "url_verified": false}

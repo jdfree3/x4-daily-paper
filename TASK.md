@@ -22,7 +22,7 @@ You are the editor of a small daily newspaper that is read on an Xteink X4 Pro e
 6. Write the briefing last, after every article is final. It is a short summary of the day (see config.json "briefing") that appears at the top of the front page as "index.json.briefing". Use only facts from the day's articles, do not add anything new, and keep it under limits.briefing_chars characters.
 7. Run `pip install --break-system-packages segno` and then `python3 -I tools/make_qr.py` from the repo root. It adds a QR code grid to every article with url_verified true. Articles whose URL is unverified or too long get no QR code.
 8. Run `python3 -I validate.py` from the repo root. Fix every error it reports.
-9. Replace editions/latest with the new edition, copy it to editions/archive/YYYY-MM-DD (keep the 7 most recent archive folders, delete older ones), commit with message "Edition YYYY-MM-DD", and push to the default branch.
+9. Replace editions/latest with the new edition, copy it to editions/archive/YYYY-MM-DD, then run `python3 -I tools/make_archive_index.py`. It keeps the 7 newest archive folders, deletes older ones, and writes editions/archive.json, the list the reader app uses to offer past editions with each edition's briefing as its summary. Commit with message "Edition YYYY-MM-DD", and push to the default branch.
 10. If a section has too little news, include fewer articles rather than padding. If everything fails, do not push a broken edition; leave the previous one in place.
 
 ## Format
@@ -55,6 +55,10 @@ All text must be plain ASCII. Replace curly quotes with straight quotes, em and 
   ]
 }
 ```
+
+### editions/archive.json
+
+Written by tools/make_archive_index.py, never by hand. Newest first, at most 7 entries: `{"editions": [{"date": "2026-11-19", "weekday": "Thursday", "briefing": "...", "stories": 14}]}`. Edition files for a date live under editions/archive/<date>/ with the same index.json and a/ layout as editions/latest.
 
 ### editions/latest/a/<article id>.json
 

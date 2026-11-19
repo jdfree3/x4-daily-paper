@@ -87,6 +87,20 @@ for sec in idx.get("sections", []):
             elif any(len(r) != n or set(r) - {"0", "1"} for r in rows):
                 errors.append(f"{aid}: bad qr rows")
 
+arch_path = root / "editions" / "archive.json"
+if not arch_path.exists():
+    errors.append("missing editions/archive.json (run tools/make_archive_index.py)")
+else:
+    arch = json.loads(arch_path.read_text()).get("editions", [])
+    if not arch or arch[0].get("date") != idx.get("date"):
+        errors.append("archive.json newest entry does not match latest edition date")
+    if len(arch) > 7:
+        errors.append("archive.json has more than 7 editions")
+    for e in arch:
+        if not (root / "editions" / "archive" / e.get("date", "?") / "index.json").exists():
+            errors.append(f"archive.json lists {e.get('date')} but its folder is missing")
+        ascii_ok(f"archive {e.get('date')} briefing", e.get("briefing", ""))
+
 extra = {p.stem for p in (ed / "a").glob("*.json")} - seen
 if extra:
     errors.append(f"orphan article files: {sorted(extra)}")
