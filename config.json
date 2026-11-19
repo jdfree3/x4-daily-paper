@@ -52,5 +52,15 @@
     "max_pages_per_article": 3,
     "summary_chars": 140,
     "headline_chars": 80
-  }
+  },
+  "fetch_domains": [
+    "bbc.com",
+    "npr.org",
+    "apnews.com",
+    "idahocapitalsun.com",
+    "arstechnica.com",
+    "kffhealthnews.org",
+    "boisestatepublicradio.org",
+    "idahostatesman.com"
+  ]
 }
