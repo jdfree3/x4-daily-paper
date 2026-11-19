@@ -1,0 +1,5 @@
+Edition 2026-11-19 notes:
+- AP, BBC, Reuters, Ars Technica and Idaho Statesman are blocked from the fetch tool; NPR listing pages had no dates or links.
+- World and Tech stories were built from dated daily roundups (Just Security, Drop Site, Democracy Now, The Neuron, Tech Trends News Update, explainx) that cite the original outlets. Each story appears in 2+ pages. Linked URLs are the original outlets named in those roundups and were not opened directly.
+- Business and Healthcare is thin on markets: all 3 stories are healthcare (STAT, Nov 17). No dated markets/economy story could be verified.
+- Anthropic IPO and Java flaw items are hedged because sources were single-aggregator or lacked details.
