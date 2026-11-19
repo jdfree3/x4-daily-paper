@@ -1,0 +1,27 @@
+{
+  "name": "Word of the Day",
+  "timezone": "America/Denver",
+  "history_days": 30,
+  "difficulty": {
+    "level": "very hard",
+    "rule": "Pick words an educated adult is unlikely to know: rare, precise, mostly out of everyday use, but real entries in a major dictionary (Merriam-Webster, Oxford English Dictionary, Collins or Wiktionary). Harder than anything on a typical SAT or GRE list.",
+    "too_easy_examples": ["leviathan", "ephemeral", "beacon", "alacrity", "equanimity", "valor", "patience", "ubiquitous", "serendipity", "petrichor"],
+    "target_examples": ["lucubration", "tergiversate", "ultracrepidarian", "inspissate", "vellicate", "apricity", "velleity", "rodomontade", "recrudescence"]
+  },
+  "connection_rule": "Each word should be at least loosely connected to the day's picture: the animal or object itself, what it does, where it lives, a sound or habit, a metaphor it suggests, or the origin of the word. A loose or poetic link is fine. Prefer a hard word with a real link over an easy word with an obvious one. Never force a link that is false or misleading.",
+  "avoid": [
+    "slurs and offensive words",
+    "words with only archaic or dialect forms you cannot confirm in a dictionary",
+    "words already listed in wotd/used_words.txt",
+    "proper nouns, brand names, abbreviations, and non-English words",
+    "words that are hard only because they are technical jargon of one narrow field, unless the definition is simple and interesting"
+  ],
+  "themes": [],
+  "limits": {
+    "word_chars": 22,
+    "pron_chars": 30,
+    "definition_chars": 130,
+    "etymology_chars": 90,
+    "connection_chars": 160
+  }
+}
