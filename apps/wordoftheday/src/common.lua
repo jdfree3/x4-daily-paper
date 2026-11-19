@@ -241,7 +241,8 @@ function C.draw_entry(g, e, set, opts)
     y = y + 36
   end
   y = y + 6
-  local pl = (e.pron or '') .. '   -   ' .. (e.pos or '')
+  local ab = { noun = 'n.', verb = 'v.', adjective = 'adj.', adverb = 'adv.' }
+  local pl = (e.pron or '') .. '  ' .. (ab[e.pos or ''] or e.pos or '')
   g:text(MX, y, (C.wrap(pl, 'medium', CW, 1)[1]) or '', { font = C.font('medium') })
   y = y + C.LH.medium + 14
   g:line(MX, y, MX + CW, y)

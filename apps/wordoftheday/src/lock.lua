@@ -26,8 +26,11 @@ local function fetch_new()
   end, true)
 end
 
+local shown = nil   -- pictures stay decoded until the next draw: the host shows the frame after on_draw,
+                   -- and a picture freed inside it draws nothing
 function on_draw(_, g)
   if not g then return end
+  if shown then C.release_set(shown); shown = nil end
   local ok, err = pcall(function()
     g:clear(0)
     local arc = C.archive()
@@ -42,8 +45,8 @@ function on_draw(_, g)
       return
     end
     local set = C.load_set(e)
+    shown = set
     C.draw_entry(g, e, set, { maxlines = 7 })
-    C.release_set(set)
   end)
   if not ok then pcall(function() g:text(10, 760, 'lock error: ' .. tostring(err):sub(1, 40)) end) end
   if not pending then pcall(function() ctx.lock:done() end) end
