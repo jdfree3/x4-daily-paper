@@ -1,0 +1,56 @@
+{
+  "paper_name": "The Morning X4",
+  "timezone": "America/Denver",
+  "sections": [
+    {
+      "id": "world",
+      "name": "World and US",
+      "articles": 4,
+      "focus": "top national and international stories of the day",
+      "avoid": "opinion pieces, celebrity news, sports scores"
+    },
+    {
+      "id": "tech",
+      "name": "Tech and AI",
+      "articles": 4,
+      "focus": "major technology and AI developments, product launches, policy",
+      "avoid": "rumors, deal listings, affiliate roundups"
+    },
+    {
+      "id": "biz",
+      "name": "Business and Healthcare",
+      "articles": 3,
+      "focus": "markets, the economy, healthcare industry and policy",
+      "avoid": "stock tips, press releases without news value"
+    },
+    {
+      "id": "idaho",
+      "name": "Idaho",
+      "articles": 3,
+      "focus": "Boise, Nampa, Meridian, Treasure Valley and Idaho state government",
+      "avoid": "crime blotter, obituaries"
+    }
+  ],
+  "preferred_sources": [
+    "Associated Press",
+    "Reuters",
+    "NPR",
+    "BBC",
+    "Idaho Statesman",
+    "Idaho Capital Sun",
+    "Boise State Public Radio",
+    "Ars Technica",
+    "STAT News"
+  ],
+  "article_style": {
+    "words_per_article": "120 to 220",
+    "tone": "neutral, newspaper style, plain language",
+    "include": "who, what, when, where, and one sentence on why it matters"
+  },
+  "limits": {
+    "page_chars": 700,
+    "max_pages_per_article": 3,
+    "summary_chars": 140,
+    "headline_chars": 80
+  }
+}
