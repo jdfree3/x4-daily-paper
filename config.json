@@ -241,5 +241,11 @@
     "per_source": 8,
     "max_chars": 3000,
     "delay_seconds": 0.6
-  }
+  },
+  "no_fetch_domains": [
+    "apnews.com",
+    "reuters.com",
+    "idahostatesman.com",
+    "news.google.com"
+  ]
 }

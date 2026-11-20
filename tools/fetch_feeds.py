@@ -103,7 +103,7 @@ def extract(page_html):
 
 def get_text(url):
     try:
-        raw = http(url, timeout=25).read(2_000_000).decode("utf-8", "ignore")
+        raw = http(url, timeout=15).read(2_000_000).decode("utf-8", "ignore")
     except Exception as e:
         return None, f"fetch failed {type(e).__name__}"
     t = extract(raw)
@@ -127,6 +127,8 @@ for f in cfg.get("feeds", []):
         kept = 0
         for it in [e for e in rootel.iter() if e.tag.split("}")[-1] in ("item", "entry")]:
             title = clean(getattr(tag(it, "title"), "text", ""), 300)
+            if "news.google.com" in f["url"]:
+                title = re.sub(r"\s+-\s+[^-]{2,40}$", "", title)
             le = tag(it, "link")
             link = ((le.text or le.get("href") or "") if le is not None else "").strip()
             de = tag(it, "pubDate", "published", "updated")
@@ -141,7 +143,7 @@ for f in cfg.get("feeds", []):
             se = tag(it, "description", "summary")
             summary = clean(se.text if se is not None else "")
             if f.get("keyword_filter") == "idaho":
-                blob = (title + " " + summary).lower()
+                blob = title.lower()
                 if not any(k in blob for k in KEYWORDS):
                     continue
             items.append({"section": f["section"], "source": f["name"], "title": title, "url": strip_tracking(link),
@@ -153,46 +155,65 @@ for f in cfg.get("feeds", []):
 
 items.sort(key=lambda x: x["published"], reverse=True)
 
-# choose items to fetch: newest first, capped per source, per section
-chosen, per_sec, per_src = [], {}, {}
+# candidates per section, round robin across sources so no outlet crowds out the others
+NOFETCH = tuple(cfg.get("no_fetch_domains", []))
+cands = {}
 for it in items:
-    s, k = it["section"], (it["section"], it["source"])
-    if it["url"] in seen or per_sec.get(s, 0) >= PER_SECTION or per_src.get(k, 0) >= PER_SOURCE:
+    if it["url"] in seen:
         continue
-    chosen.append(it)
-    per_sec[s] = per_sec.get(s, 0) + 1
-    per_src[k] = per_src.get(k, 0) + 1
+    cands.setdefault(it["section"], {}).setdefault(it["source"], []).append(it)
+order = {}
+for s, srcs in cands.items():
+    lists = [v[:PER_SOURCE * 2] for v in srcs.values()]
+    rr = []
+    for i in range(max(len(l) for l in lists)):
+        for l in lists:
+            if i < len(l):
+                rr.append(l[i])
+    order[s] = rr
 
 adir = root / "sources" / "articles"
 adir.mkdir(parents=True, exist_ok=True)
 for old in adir.glob("*.json"):
     old.unlink()
-bysec = {}
-for it in chosen:
-    if "news.google.com" in it["url"]:
-        real = resolve_google(it["url"])
-        time.sleep(DELAY)
-        if real:
+bysec, chosen = {}, []
+for s, rr in order.items():
+    got, tries, per_src = 0, 0, {}
+    for it in rr:
+        if got >= PER_SECTION or tries >= PER_SECTION * 3:
+            break
+        if per_src.get(it["source"], 0) >= PER_SOURCE:
+            continue
+        tries += 1
+        if "news.google.com" in it["url"]:
+            real = resolve_google(it["url"])
+            time.sleep(DELAY)
+            if not real:
+                it["url_resolved"] = False
+                it["text_status"] = "google link not resolved"
+                continue
             it["feed_url"], it["url"] = it["url"], strip_tracking(real)
             it["url_resolved"] = True
-        else:
-            it["url_resolved"] = False
-            it["text_status"] = "google link not resolved"
-            bysec.setdefault(it["section"], []).append(it)
+            if it["url"] in seen:
+                continue
+        if NOFETCH and urllib.parse.urlsplit(it["url"]).netloc.lower().endswith(NOFETCH):
+            it["text_status"] = "site blocks automated fetch; headline only"
             continue
-        if it["url"] in seen:
-            continue
-    text, st = get_text(it["url"])
-    time.sleep(DELAY)
-    it["text_status"] = st
-    if text:
-        it["text"] = text
-    bysec.setdefault(it["section"], []).append(it)
+        text, st = get_text(it["url"])
+        time.sleep(DELAY)
+        it["text_status"] = st
+        if text:
+            it["text"] = text
+            got += 1
+            per_src[it["source"]] = per_src.get(it["source"], 0) + 1
+            bysec.setdefault(s, []).append(it)
+            chosen.append(it)
 
 for s, lst in bysec.items():
     (adir / f"{s}.json").write_text(json.dumps(lst, indent=1))
-index = [{k: v for k, v in it.items() if k != "text"} | {"has_text": it in sum(bysec.values(), []) and "text" in it} for it in items]
+withtext = {id(i) for l in bysec.values() for i in l}
+index = [{k: v for k, v in it.items() if k != "text"} | {"has_text": id(it) in withtext} for it in items]
 (root / "sources" / "today.json").write_text(json.dumps({"generated_at": now.strftime("%Y-%m-%dT%H:%MZ"), "feed_status": status, "items": index}, indent=1))
-ok = sum(1 for l in bysec.values() for i in l if "text" in i)
+ok = len(withtext)
 print(json.dumps(status, indent=1))
 print(len(items), "items,", len(chosen), "chosen,", ok, "with text")
