@@ -1,7 +1,4 @@
 Edition 2026-11-20 notes:
-- Thin edition. AP, NPR, BBC, Ars Technica and Idaho Statesman were rejected by the fetch tool (PROVENANCE_REQUIRED) and search returned titles only, so no new World, Tech, or Business market stories could be confirmed.
-- Tech section is empty: all earlier tech stories are older than 48 hours.
-- World shows two stories carried over from the Nov 19 edition (dated Nov 18, within 48 hours), not re-verified.
+- World and Tech omitted: AP, NPR, BBC, Ars Technica blocked by the fetch tool and no new stories could be dated. Earlier stories were not repeated.
 - Business has two KFF Health News stories dated Nov 18. No market story could be dated.
-- Idaho stories are from Boise State Public Radio listing teasers only (article pages could not be opened), so they are brief and url_verified is false.
-- Domain filtered searches (allowed_domains) failed with a proxy error.
+- Idaho stories come from Boise State Public Radio listing teasers only, so they are brief and url_verified is false.

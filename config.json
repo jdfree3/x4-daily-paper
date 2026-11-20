@@ -56,18 +56,59 @@
     "section_brief_chars": 120
   },
   "fetch_domains": [
-    "bbc.com",
-    "npr.org",
+    "aiweekly.co",
     "apnews.com",
-    "idahocapitalsun.com",
     "arstechnica.com",
-    "kffhealthnews.org",
+    "bbc.co.uk",
+    "bbc.com",
     "boisestatepublicradio.org",
-    "idahostatesman.com"
+    "democracynow.org",
+    "dropsitenews.com",
+    "idahocapitalsun.com",
+    "idahonews.com",
+    "idahostatesman.com",
+    "justsecurity.org",
+    "kffhealthnews.org",
+    "kivitv.com",
+    "ktvb.com",
+    "npr.org",
+    "reuters.com",
+    "statnews.com",
+    "theneuron.ai"
   ],
   "briefing": {
     "label": "Today in brief",
     "length": "4 to 6 short sentences, about 60 to 90 words",
     "style": "neutral, covers each section's top story, only facts that appear in the day's articles"
-  }
+  },
+  "seed_urls": {
+    "world": [
+      "https://apnews.com/hub/ap-top-news",
+      "https://www.npr.org/sections/news/",
+      "https://www.bbc.com/news/world",
+      "https://www.bbc.com/news/us-canada"
+    ],
+    "tech": [
+      "https://arstechnica.com/",
+      "https://arstechnica.com/ai/",
+      "https://www.theneuron.ai/digest/"
+    ],
+    "biz": [
+      "https://apnews.com/hub/financial-markets",
+      "https://kffhealthnews.org/morning-briefing/",
+      "https://www.statnews.com/"
+    ],
+    "idaho": [
+      "https://idahocapitalsun.com/",
+      "https://www.boisestatepublicradio.org/",
+      "https://www.idahostatesman.com/",
+      "https://www.kivitv.com/news/local-news"
+    ]
+  },
+  "roundup_sources": [
+    "https://www.theneuron.ai/digest/",
+    "https://www.justsecurity.org/",
+    "https://kffhealthnews.org/morning-briefing/",
+    "https://aiweekly.co/"
+  ]
 }
