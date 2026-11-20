@@ -1,17 +1,17 @@
 {
- "date": "2026-11-19",
- "weekday": "Thursday",
- "word": "lucubration",
- "pron": "loo-kyuh-BRAY-shun",
- "pos": "noun",
- "definition": "Careful, laborious study or writing, especially done late at night.",
- "etymology": "From the Latin lucubrare, to work by lamplight.",
- "image": "eagle-owl-standing",
- "connection": "The owl is the old emblem of night study and learning, and lucubration means working by lamplight.",
- "generated_at": "2026-11-19T08:10:00Z",
+ "date": "2026-11-20",
+ "weekday": "Friday",
+ "word": "papilionaceous",
+ "pron": "puh-pil-ee-uh-NAY-shus",
+ "pos": "adjective",
+ "definition": "Of a flower, like the pea's, with petals arranged in the shape of a butterfly.",
+ "etymology": "From the Latin papilio, butterfly.",
+ "image": "swallowtail-butterfly",
+ "connection": "The swallowtail is a butterfly, and papilionaceous comes from the Latin word for butterfly.",
+ "generated_at": "2026-11-20T12:24:00Z",
  "word_img": {
   "file": "word.jpg",
-  "w": 328,
-  "h": 63
+  "w": 324,
+  "h": 49
  }
 }
