@@ -196,24 +196,6 @@
       "url": "https://www.boisestatepublicradio.org/index.rss"
     },
     {
-      "section": "idaho",
-      "name": "Idaho Statesman",
-      "url": "https://news.google.com/rss/search?q=site:idahostatesman.com+when:2d&hl=en-US&gl=US&ceid=US:en",
-      "keyword_filter": "idaho"
-    },
-    {
-      "section": "idaho",
-      "name": "KTVB",
-      "url": "https://news.google.com/rss/search?q=site:ktvb.com+Boise+when:2d&hl=en-US&gl=US&ceid=US:en",
-      "keyword_filter": "idaho"
-    },
-    {
-      "section": "idaho",
-      "name": "KIVI",
-      "url": "https://news.google.com/rss/search?q=site:kivitv.com+when:2d&hl=en-US&gl=US&ceid=US:en",
-      "keyword_filter": "idaho"
-    },
-    {
       "section": "tech",
       "name": "The Verge",
       "url": "https://www.theverge.com/rss/index.xml"
@@ -227,6 +209,30 @@
       "section": "tech",
       "name": "Wired",
       "url": "https://www.wired.com/feed/rss"
+    },
+    {
+      "section": "idaho",
+      "name": "KIVI",
+      "url": "https://www.kivitv.com/index.rss",
+      "keyword_filter": "idaho"
+    },
+    {
+      "section": "idaho",
+      "name": "KTVB",
+      "url": "https://www.ktvb.com/feeds/syndication/rss/news/local",
+      "keyword_filter": "idaho"
+    },
+    {
+      "section": "idaho",
+      "name": "Idaho Press",
+      "url": "https://www.idahopress.com/search/?f=rss&t=article&c=news&l=25&s=start_time&sd=desc",
+      "keyword_filter": "idaho"
+    },
+    {
+      "section": "idaho",
+      "name": "Idaho Statesman",
+      "url": "https://www.idahostatesman.com/news/local/?widgetName=rssfeed&widgetContentId=712015&getXmlFeed=true",
+      "keyword_filter": "idaho"
     }
   ],
   "idaho_keywords": [
@@ -245,7 +251,6 @@
   "no_fetch_domains": [
     "apnews.com",
     "reuters.com",
-    "idahostatesman.com",
     "news.google.com"
   ]
 }
