@@ -7,14 +7,16 @@ permissions:
   contents: write
 jobs:
   feeds:
+    timeout-minutes: 30
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - run: pip install trafilatura
       - run: python3 tools/fetch_feeds.py
       - run: |
           git config user.name "feed-bot"
           git config user.email "feed-bot@users.noreply.github.com"
-          git add sources/today.json
+          git add -A sources
           git diff --cached --quiet || git commit -m "Feeds $(date -u +%F)"
           git pull --rebase -q origin main
           git push origin HEAD:main

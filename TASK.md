@@ -17,9 +17,14 @@ You are the editor of a small daily newspaper that is read on an Xteink X4 Pro e
 - Empty sections: if a section has no confirmed story, omit it from index.json, mention it in notes.txt, and say in the briefing that the section is not covered today.
 - If a section ends up with fewer articles than requested, ship fewer. Add a line to editions/latest/notes.txt saying which sections were thin and why, so the owner can tune config.json.
 
-## Pre-fetched feeds
+## Pre-fetched feeds and article text
 
-A GitHub Actions workflow (.github/workflows/feeds.yml) runs daily at 12:00 UTC and commits sources/today.json: recent items (last 60 hours) from the RSS feeds in config.json "feeds", each with section, source, title, url, published, summary. Pull the latest main before starting. Use it first: it has real dates and URLs, so use items dated within 48 hours of the edition date and set url_verified true for them. Check feed_status for feeds that failed, and generated_at: if it is older than 30 hours or empty, fall back to seed URLs, roundups and search. Google News links may be redirects, so prefer the original outlet URL when a search shows it. Summaries are short, so still search for more detail before writing an article, and never copy the summary text.
+A GitHub Actions workflow (.github/workflows/feeds.yml) runs daily at 12:00 UTC, runs tools/fetch_feeds.py, and commits two things:
+
+- sources/today.json: an index of recent items (last 60 hours) from the RSS feeds in config.json "feeds", each with section, source, title, url, published, summary, and has_text. It also has generated_at and feed_status.
+- sources/articles/<section>.json: for the newest items per section, the extracted article text (up to article_fetch.max_chars) in a "text" field, with "text_status". Google News links are resolved to the outlet URL when possible (url_resolved). Idaho items from the Statesman, KTVB and KIVI are kept only if the title or summary mentions an idaho_keywords term.
+
+How to use it: run git pull origin main, read sources/today.json, then read sources/articles/<section>.json for each section. Pick stories from items dated within 48 hours of the edition date, write each from its "text" in your own words, and use its "url" and "published". Set url_verified true for items from this feed data. Skip items without text unless a second source in the feed data covers the same story. If generated_at is older than 30 hours or the files are empty, fall back to the seed URLs, roundup sources and search. Items whose url still contains news.google.com should be replaced by the outlet URL if a search shows it, otherwise the QR will be too dense. The feed data is already filtered against past editions, but dedupe_check.py is the final gate.
 
 ## Steps
 

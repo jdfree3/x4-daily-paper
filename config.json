@@ -79,7 +79,10 @@
     "raw.githubusercontent.com",
     "reuters.com",
     "statnews.com",
-    "theneuron.ai"
+    "techcrunch.com",
+    "theneuron.ai",
+    "theverge.com",
+    "wired.com"
   ],
   "briefing": {
     "label": "Today in brief",
@@ -195,17 +198,48 @@
     {
       "section": "idaho",
       "name": "Idaho Statesman",
-      "url": "https://news.google.com/rss/search?q=site:idahostatesman.com+when:2d&hl=en-US&gl=US&ceid=US:en"
+      "url": "https://news.google.com/rss/search?q=site:idahostatesman.com+when:2d&hl=en-US&gl=US&ceid=US:en",
+      "keyword_filter": "idaho"
     },
     {
       "section": "idaho",
       "name": "KTVB",
-      "url": "https://news.google.com/rss/search?q=site:ktvb.com+Boise+when:2d&hl=en-US&gl=US&ceid=US:en"
+      "url": "https://news.google.com/rss/search?q=site:ktvb.com+Boise+when:2d&hl=en-US&gl=US&ceid=US:en",
+      "keyword_filter": "idaho"
     },
     {
       "section": "idaho",
       "name": "KIVI",
-      "url": "https://news.google.com/rss/search?q=site:kivitv.com+when:2d&hl=en-US&gl=US&ceid=US:en"
+      "url": "https://news.google.com/rss/search?q=site:kivitv.com+when:2d&hl=en-US&gl=US&ceid=US:en",
+      "keyword_filter": "idaho"
+    },
+    {
+      "section": "tech",
+      "name": "The Verge",
+      "url": "https://www.theverge.com/rss/index.xml"
+    },
+    {
+      "section": "tech",
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/feed/"
+    },
+    {
+      "section": "tech",
+      "name": "Wired",
+      "url": "https://www.wired.com/feed/rss"
     }
-  ]
+  ],
+  "idaho_keywords": [
+    "Boise",
+    "Idaho",
+    "Treasure Valley",
+    "Nampa",
+    "Meridian"
+  ],
+  "article_fetch": {
+    "per_section": 24,
+    "per_source": 8,
+    "max_chars": 3000,
+    "delay_seconds": 0.6
+  }
 }
