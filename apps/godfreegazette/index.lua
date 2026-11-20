@@ -518,33 +518,28 @@ local function draw_home(g)
   text(g, fl((W - tw('large', title)) / 2), 12, title, 'large')
   local idx = S.idx
   local y = 52
-  if idx then
-    text(g, MX, y + 2, pretty_short(idx.date, idx.weekday), 'small')
-    text(g, MX, y + 24, stories(story_count(idx)), 'small')
-  else
-    text(g, MX, y + 12, S.date and pretty_short(S.date) or 'Loading...', 'small')
+  do  -- dateline, centered between the rules
+    local dl = idx and (pretty_short(idx.date, idx.weekday) .. '   |   ' .. stories(story_count(idx)))
+      or (S.date and pretty_short(S.date) or 'Loading...')
+    text(g, fl((W - tw('small', dl)) / 2), y + 2, dl, 'small')
   end
-  do  -- status (when there is one) takes the top right, where the old button was
-    local st = S.status
-    if not st and S.pf and S.pf.total > 0 then st = 'Saving stories ' .. S.pf.done .. '/' .. S.pf.total end
-    if st then
-      local ln = wrap(st, 'small', 190, 2)
-      for i, l in ipairs(ln) do text(g, W - MX - tw('small', l), y + 2 + (i - 1) * LH.small, l, 'small') end
-    end
+  local st = S.status
+  if not st and S.pf and S.pf.total > 0 then st = 'Saving stories ' .. S.pf.done .. '/' .. S.pf.total end
+  if st and idx then   -- a short status line under the dateline, only while there is one
+    local l = wrap(st, 'small', W - 2 * MX, 1)[1] or ''
+    text(g, fl((W - tw('small', l)) / 2), y + 2 + LH.small, l, 'small')
+    y = y + LH.small
   end
-  y = y + 56
+  y = y + 32
   rule(g, y, MX, W - MX, 2); rule(g, y + 5, MX, W - MX, 1)
   y = y + 16
   if not idx then
     local msg = S.status or 'Loading the edition...'
     for _, ln in ipairs(wrap(msg, 'medium', W - 2 * MX, 6)) do text(g, MX, y, ln, 'medium'); y = y + 28 end
   else
-    text(g, MX, y, 'THIS EDITION IN BRIEF', 'small'); y = y + 26
     local lines = wrap(idx.briefing or 'No summary for this edition.', 'small', W - 2 * MX, 14)
     for _, ln in ipairs(lines) do text(g, MX, y, ln, 'small'); y = y + LH.small end
-    y = y + 6
-    text(g, MX, y, 'Summary written by Claude from the stories', 'small'); y = y + 34
-    text(g, MX, y, 'SECTIONS', 'small'); y = y + 26
+    y = y + 14
     local secs = idx.sections or {}
     local room = (H - 64) - y
     local rh = math.max(52, math.min(64, fl(room / math.max(1, #secs))))
@@ -559,7 +554,7 @@ local function draw_home(g)
   end
   -- footer: the edition (tap to change it) on the left, Refresh on the right
   rule(g, H - 52, MX, W - MX, 1)
-  local label = 'Edition: ' .. ((idx and pretty_short(idx.date, idx.weekday)) or (S.date and pretty_short(S.date)) or '...')
+  local label = 'Past editions'
   local bw = W - 2 * MX - 122
   while tw('small', label) > bw - 52 and #label > 12 do label = label:sub(1, -2) end
   button(g, MX, H - 46, bw, 38, label, 'small', function()
