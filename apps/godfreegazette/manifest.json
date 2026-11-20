@@ -1,7 +1,7 @@
 {
   "app_id": "godfreegazette",
   "display_name": "Godfrey Gazette",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "author": "Josh",
   "description": "A daily newspaper written each morning: a short brief, four sections, readable pages, QR links, and the last 7 editions.",
   "entry": "index.lua",

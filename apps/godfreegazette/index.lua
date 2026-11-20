@@ -345,7 +345,16 @@ local function open_edition(date, force)
   S.sec = 1
   local cached = (not force) and sread(f_idx(date)) or nil
   local idx = cached and decode(cached) or nil
-  if idx and idx.sections then S.idx = idx; prefetch(); refresh(true); return end
+  if idx and idx.sections then
+    S.idx = idx; prefetch(); refresh(true)
+    -- the cached copy is shown at once; quietly re-check it so edits to the edition reach the device
+    get(BASE .. 'editions/archive/' .. date .. '/index.json', function(body)
+      if S.date ~= date or not body or body == cached then return end
+      local t = decode(body)
+      if t and t.sections then S.idx = t; swrite(f_idx(date), body); refresh(true) end
+    end, false)
+    return
+  end
   S.status = 'Loading edition...'
   get(BASE .. 'editions/archive/' .. date .. '/index.json', function(body, err)
     if S.date ~= date then return end
