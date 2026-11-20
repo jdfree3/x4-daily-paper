@@ -5,28 +5,28 @@
     {
       "id": "world",
       "name": "World and US",
-      "articles": 4,
+      "articles": 5,
       "focus": "top national and international stories of the day",
       "avoid": "opinion pieces, celebrity news, sports scores"
     },
     {
       "id": "tech",
       "name": "Tech and AI",
-      "articles": 4,
+      "articles": 5,
       "focus": "major technology and AI developments, product launches, policy",
       "avoid": "rumors, deal listings, affiliate roundups"
     },
     {
       "id": "biz",
       "name": "Business and Healthcare",
-      "articles": 3,
+      "articles": 5,
       "focus": "markets, the economy, healthcare industry and policy",
       "avoid": "stock tips, press releases without news value"
     },
     {
       "id": "idaho",
       "name": "Idaho",
-      "articles": 3,
+      "articles": 5,
       "focus": "Boise, Nampa, Meridian, Treasure Valley and Idaho state government",
       "avoid": "crime blotter, obituaries"
     }
