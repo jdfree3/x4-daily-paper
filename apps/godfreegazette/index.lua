@@ -283,6 +283,31 @@ local function get(url, done, priority)
   pump()
 end
 
+------------------------------------------------------------------ masthead picture
+
+local MAST_URL = BASE .. 'editions/masthead.jpg'
+local function mast_image()
+  if S.mast then return S.mast end
+  if S.mast_tried then return nil end
+  S.mast_tried = true
+  local okc, caps = pcall(function() return ctx.capabilities end)
+  if okc and type(caps) == 'table' and caps.image_decode == false then return nil end
+  local bytes = sread('masthead.jpg')
+  if not bytes or bytes:sub(1, 2) ~= '\255\216' then return nil end
+  local ok, img = pcall(function() return ctx.image:decode(bytes) end)
+  if ok and type(img) == 'table' or ok and type(img) == 'userdata' then S.mast = img end
+  return S.mast
+end
+local function fetch_mast()
+  if sread('masthead.jpg') then return end
+  get(MAST_URL, function(body)
+    if body and body:sub(1, 2) == '\255\216' then
+      swrite('masthead.jpg', body)
+      S.mast_tried = false
+    end
+  end, false)
+end
+
 ------------------------------------------------------------------ data flow
 
 local function find_entry(date)
@@ -514,11 +539,19 @@ end
 ------------------------------------------------------------------ screens
 
 local function draw_home(g)
-  local title = 'The Godfrey Gazette'
-  text(g, fl((W - tw('large', title)) / 2), 12, title, 'large')
   local idx = S.idx
-  local y = 52
-  do  -- dateline, centered between the rules
+  local mast = mast_image()
+  local y
+  if mast then
+    local mh = tonumber(mast.height) or 89
+    g:image(mast, fl((W - (tonumber(mast.width) or 432)) / 2), 8)
+    y = 8 + mh + 8
+  else
+    local title = 'Godfrey Gazette'
+    text(g, fl((W - tw('large', title)) / 2), 12, title, 'large')
+    y = 52
+  end
+  do  -- dateline, centered
     local dl = idx and (pretty_short(idx.date, idx.weekday) .. '   |   ' .. stories(story_count(idx)))
       or (S.date and pretty_short(S.date) or 'Loading...')
     text(g, fl((W - tw('small', dl)) / 2), y + 2, dl, 'small')
@@ -537,16 +570,26 @@ local function draw_home(g)
     local msg = S.status or 'Loading the edition...'
     for _, ln in ipairs(wrap(msg, 'medium', W - 2 * MX, 6)) do text(g, MX, y, ln, 'medium'); y = y + 28 end
   else
-    local lines = wrap(idx.briefing or 'No summary for this edition.', 'small', W - 2 * MX, 14)
-    for _, ln in ipairs(lines) do text(g, MX, y, ln, 'small'); y = y + LH.small end
-    y = y + 14
     local secs = idx.sections or {}
+    local briefs = #secs > 0
+    for _, sec in ipairs(secs) do if not (sec.brief and sec.brief ~= '') then briefs = false end end
+    if not briefs then   -- older editions: one summary paragraph, then plain rows
+      local lines = wrap(idx.briefing or 'No summary for this edition.', 'small', W - 2 * MX, 14)
+      for _, ln in ipairs(lines) do text(g, MX, y, ln, 'small'); y = y + LH.small end
+      y = y + 14
+    end
     local room = (H - 64) - y
-    local rh = math.max(52, math.min(64, fl(room / math.max(1, #secs))))
+    local rh = math.max(52, math.min(briefs and 150 or 64, fl(room / math.max(1, #secs))))
     for i, sec in ipairs(secs) do
       g:rect(MX - 8, y, W - 2 * MX + 16, rh - 6, { line_width = 2 })
       text(g, MX + 4, y + 6, sec.name, 'medium')
-      text(g, MX + 4, y + 6 + LH.medium, stories(#(sec.articles or {})), 'small')
+      if briefs then
+        local maxl = math.max(1, fl((rh - 6 - 6 - LH.medium - 6) / LH.small))
+        local by = y + 6 + LH.medium + 2
+        for _, ln in ipairs(wrap(sec.brief, 'small', W - 2 * MX - 36, maxl)) do text(g, MX + 4, by, ln, 'small'); by = by + LH.small end
+      else
+        text(g, MX + 4, y + 6 + LH.medium, stories(#(sec.articles or {})), 'small')
+      end
       chevron_right(g, W - MX - 6, y + fl((rh - 6) / 2))
       hit(MX - 8, y, W - 2 * MX + 16, rh - 6, function() S.sec = i; go('section') end)
       y = y + rh
@@ -890,10 +933,12 @@ function on_load(c)
     open_edition(t.editions[1].date, false)            -- shows the saved copy at once, offline too
   end
   fetch_archive(false)
+  fetch_mast()
   refresh(true)
 end
 
 function on_leave()
+  if S.mast then pcall(function() S.mast:release() end); S.mast = nil; S.mast_tried = false end
   pcall(function() ctx.net:keep_wifi(1) end)
 end
 

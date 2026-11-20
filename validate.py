@@ -34,6 +34,13 @@ if not brief:
 elif len(brief) > lim.get("briefing_chars", 600):
     errors.append(f"briefing is {len(brief)} chars, max {lim.get('briefing_chars', 600)}")
 ascii_ok("briefing", brief)
+for sec in idx.get("sections", []):
+    sb = sec.get("brief", "")
+    if not sb:
+        errors.append(f"section {sec.get('id')}: missing brief")
+    elif len(sb) > lim.get("section_brief_chars", 120):
+        errors.append(f"section {sec.get('id')}: brief is {len(sb)} chars, max {lim.get('section_brief_chars', 120)}")
+    ascii_ok(f"section {sec.get('id')} brief", sb)
 
 seen = set()
 total = idx_path.stat().st_size

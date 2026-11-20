@@ -19,7 +19,7 @@ You are the editor of a small daily newspaper that is read on an Xteink X4 Pro e
 3. Pick the requested number of articles per section. Avoid duplicates across sections and avoid anything under "avoid".
 4. Write each article in your own words in the configured style. Do not copy sentences from the source. Never quote more than a short phrase. Always name the source and keep the URL.
 5. Build the edition files exactly as described in "Format" below. Set "url_verified": true on an article only if you opened its URL or saw that exact URL in a search result. Otherwise set it to false.
-6. Write the briefing last, after every article is final. It is a short summary of the day (see config.json "briefing") that appears at the top of the front page as "index.json.briefing". Use only facts from the day's articles, do not add anything new, and keep it under limits.briefing_chars characters.
+6. Write the briefing last, after every article is final. It is a short summary of the day (see config.json "briefing") that appears at the top of the front page as "index.json.briefing". Use only facts from the day's articles, do not add anything new, and keep it under limits.briefing_chars characters. Also give every section a "brief": one or two very short sentences (at most limits.section_brief_chars characters) covering that section's top stories, drawn only from the section's articles. The reader app shows it under the section name on the front page.
 7. Run `pip install --break-system-packages segno` and then `python3 -I tools/make_qr.py` from the repo root. It adds a QR code grid to every article with url_verified true. Articles whose URL is unverified or too long get no QR code.
 8. Run `python3 -I validate.py` from the repo root. Fix every error it reports.
 9. Replace editions/latest with the new edition, copy it to editions/archive/YYYY-MM-DD, then run `python3 -I tools/make_archive_index.py`. It keeps the 7 newest archive folders, deletes older ones, and writes editions/archive.json, the list the reader app uses to offer past editions with each edition's briefing as its summary. Commit with message "Edition YYYY-MM-DD", and push to the default branch.
@@ -42,6 +42,7 @@ All text must be plain ASCII. Replace curly quotes with straight quotes, em and 
     {
       "id": "world",
       "name": "World and US",
+      "brief": "One or two very short sentences on this section's top stories.",
       "articles": [
         {
           "id": "world-1",

@@ -52,7 +52,8 @@
     "max_pages_per_article": 3,
     "summary_chars": 140,
     "headline_chars": 80,
-    "briefing_chars": 600
+    "briefing_chars": 600,
+    "section_brief_chars": 120
   },
   "fetch_domains": [
     "bbc.com",
