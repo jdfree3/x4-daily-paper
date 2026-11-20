@@ -64,6 +64,9 @@
     "boisestatepublicradio.org",
     "democracynow.org",
     "dropsitenews.com",
+    "feeds.arstechnica.com",
+    "feeds.bbci.co.uk",
+    "feeds.npr.org",
     "idahocapitalsun.com",
     "idahonews.com",
     "idahostatesman.com",
@@ -71,7 +74,9 @@
     "kffhealthnews.org",
     "kivitv.com",
     "ktvb.com",
+    "news.google.com",
     "npr.org",
+    "raw.githubusercontent.com",
     "reuters.com",
     "statnews.com",
     "theneuron.ai"
@@ -110,5 +115,97 @@
     "https://www.justsecurity.org/",
     "https://kffhealthnews.org/morning-briefing/",
     "https://aiweekly.co/"
+  ],
+  "feeds": [
+    {
+      "section": "world",
+      "name": "NPR",
+      "url": "https://feeds.npr.org/1001/rss.xml"
+    },
+    {
+      "section": "world",
+      "name": "BBC",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "section": "world",
+      "name": "BBC US",
+      "url": "https://feeds.bbci.co.uk/news/world/us_and_canada/rss.xml"
+    },
+    {
+      "section": "world",
+      "name": "Associated Press",
+      "url": "https://news.google.com/rss/search?q=site:apnews.com+when:2d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "section": "world",
+      "name": "Reuters",
+      "url": "https://news.google.com/rss/search?q=site:reuters.com+when:2d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "section": "tech",
+      "name": "Ars Technica",
+      "url": "https://feeds.arstechnica.com/arstechnica/index"
+    },
+    {
+      "section": "tech",
+      "name": "NPR Technology",
+      "url": "https://feeds.npr.org/1019/rss.xml"
+    },
+    {
+      "section": "tech",
+      "name": "BBC Technology",
+      "url": "https://feeds.bbci.co.uk/news/technology/rss.xml"
+    },
+    {
+      "section": "biz",
+      "name": "NPR Business",
+      "url": "https://feeds.npr.org/1006/rss.xml"
+    },
+    {
+      "section": "biz",
+      "name": "BBC Business",
+      "url": "https://feeds.bbci.co.uk/news/business/rss.xml"
+    },
+    {
+      "section": "biz",
+      "name": "KFF Health News",
+      "url": "https://kffhealthnews.org/feed/"
+    },
+    {
+      "section": "biz",
+      "name": "STAT News",
+      "url": "https://www.statnews.com/feed/"
+    },
+    {
+      "section": "biz",
+      "name": "AP Business",
+      "url": "https://news.google.com/rss/search?q=site:apnews.com+business+when:2d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "section": "idaho",
+      "name": "Idaho Capital Sun",
+      "url": "https://idahocapitalsun.com/feed/"
+    },
+    {
+      "section": "idaho",
+      "name": "Boise State Public Radio",
+      "url": "https://www.boisestatepublicradio.org/index.rss"
+    },
+    {
+      "section": "idaho",
+      "name": "Idaho Statesman",
+      "url": "https://news.google.com/rss/search?q=site:idahostatesman.com+when:2d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "section": "idaho",
+      "name": "KTVB",
+      "url": "https://news.google.com/rss/search?q=site:ktvb.com+Boise+when:2d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "section": "idaho",
+      "name": "KIVI",
+      "url": "https://news.google.com/rss/search?q=site:kivitv.com+when:2d&hl=en-US&gl=US&ceid=US:en"
+    }
   ]
 }

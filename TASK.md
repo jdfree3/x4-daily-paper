@@ -17,15 +17,19 @@ You are the editor of a small daily newspaper that is read on an Xteink X4 Pro e
 - Empty sections: if a section has no confirmed story, omit it from index.json, mention it in notes.txt, and say in the briefing that the section is not covered today.
 - If a section ends up with fewer articles than requested, ship fewer. Add a line to editions/latest/notes.txt saying which sections were thin and why, so the owner can tune config.json.
 
+## Pre-fetched feeds
+
+A GitHub Actions workflow (.github/workflows/feeds.yml) runs daily at 12:00 UTC and commits sources/today.json: recent items (last 60 hours) from the RSS feeds in config.json "feeds", each with section, source, title, url, published, summary. Pull the latest main before starting. Use it first: it has real dates and URLs, so use items dated within 48 hours of the edition date and set url_verified true for them. Check feed_status for feeds that failed, and generated_at: if it is older than 30 hours or empty, fall back to seed URLs, roundups and search. Google News links may be redirects, so prefer the original outlet URL when a search shows it. Summaries are short, so still search for more detail before writing an article, and never copy the summary text.
+
 ## Steps
 
-1. Read config.json. It defines the paper name, sections, how many articles each section gets, preferred sources, style, and size limits.
+1. Run `git pull origin main`, then read config.json and sources/today.json. It defines the paper name, sections, how many articles each section gets, preferred sources, style, and size limits.
 2. For each section, search the web for today's news that fits the section focus. Prefer the listed sources. Use several searches per section. Open the best articles with WebFetch when snippets are too thin. Only use stories from the last 24 to 48 hours.
 3. Pick the requested number of articles per section. Avoid duplicates across sections and avoid anything under "avoid".
 4. Write each article in your own words in the configured style. Do not copy sentences from the source. Never quote more than a short phrase. Always name the source and keep the URL.
 5. Build the edition files exactly as described in "Format" below. Set "url_verified": true on an article only if you opened its URL or saw that exact URL in a search result. Otherwise set it to false.
 6. Write the briefing last, after every article is final. It is a short summary of the day (see config.json "briefing") that appears at the top of the front page as "index.json.briefing". Use only facts from the day's articles, do not add anything new, and keep it under limits.briefing_chars characters. Also give every section a "brief": one or two very short sentences (at most limits.section_brief_chars characters) covering that section's top stories, drawn only from the section's articles. The reader app shows it under the section name on the front page.
-7. Run `pip install --break-system-packages segno` and then `python3 -I tools/make_qr.py` from the repo root. It adds a QR code grid to every article with url_verified true. Articles whose URL is unverified or too long get no QR code.
+7. Run `pip install --break-system-packages segno` and then `python3 -I tools/make_qr.py` from the repo root. It adds a QR code grid to every article that has a URL, whether or not url_verified is true. Only URLs too long for the grid get none, so prefer short canonical URLs (strip tracking parameters).
 8. Run `python3 -I validate.py` from the repo root. Fix every error it reports.
 9. Run `tools/publish.sh YYYY-MM-DD` from the repo root. It builds QR codes, copies latest to editions/archive/YYYY-MM-DD, rebuilds archive.json, runs validate.py and dedupe_check.py, then commits "Edition YYYY-MM-DD" and pushes to main. It stops at the first failure and pushes nothing, so fix the reported errors and rerun it. Do not commit by hand.
 10. If a section has too little news, include fewer articles rather than padding. If everything fails, do not push a broken edition; leave the previous one in place.

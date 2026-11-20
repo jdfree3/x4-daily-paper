@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Add a QR grid to each article in editions/latest/a whose url_verified is true."""
+"""Add a QR grid to every article in editions/latest/a that has a URL, verified or not."""
 import json
 from pathlib import Path
 
@@ -11,7 +11,7 @@ added = skipped = 0
 for p in sorted((root / "editions" / "latest" / "a").glob("*.json")):
     art = json.loads(p.read_text())
     art.pop("qr", None)
-    if art.get("url_verified") is True:
+    if str(art.get("url", "")).startswith("http"):
         q = segno.make(art["url"], error="l", micro=False, boost_error=False)
         n = len(q.matrix)
         if n <= MAX_N:

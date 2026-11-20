@@ -87,8 +87,6 @@ for sec in idx.get("sections", []):
         qr = art.get("qr")
         if qr is not None:
             n, rows = qr.get("n"), qr.get("rows", [])
-            if art.get("url_verified") is not True:
-                errors.append(f"{aid}: qr present but url not verified")
             if not isinstance(n, int) or not 21 <= n <= 49 or len(rows) != n:
                 errors.append(f"{aid}: bad qr size")
             elif any(len(r) != n or set(r) - {"0", "1"} for r in rows):
