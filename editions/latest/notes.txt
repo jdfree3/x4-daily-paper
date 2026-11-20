@@ -1,5 +1,7 @@
-Edition 2026-11-19 notes:
-- AP, BBC, Reuters, Ars Technica and Idaho Statesman are blocked from the fetch tool; NPR listing pages had no dates or links.
-- World and Tech stories were built from dated daily roundups (Just Security, Drop Site, Democracy Now, The Neuron, Tech Trends News Update, explainx) that cite the original outlets. Each story appears in 2+ pages. Linked URLs are the original outlets named in those roundups and were not opened directly.
-- Business: biz-3 replaced with a Nov 18 market close story (headline-level snippets only, details hedged). Healthcare stories are from STAT, Nov 17. FDA nominee story dropped.
-- Anthropic IPO and Java flaw items are hedged because sources were single-aggregator or lacked details.
+Edition 2026-11-20 notes:
+- Thin edition. AP, NPR, BBC, Ars Technica and Idaho Statesman were rejected by the fetch tool (PROVENANCE_REQUIRED) and search returned titles only, so no new World, Tech, or Business market stories could be confirmed.
+- Tech section is empty: all earlier tech stories are older than 48 hours.
+- World shows two stories carried over from the Nov 19 edition (dated Nov 18, within 48 hours), not re-verified.
+- Business has two KFF Health News stories dated Nov 18. No market story could be dated.
+- Idaho stories are from Boise State Public Radio listing teasers only (article pages could not be opened), so they are brief and url_verified is false.
+- Domain filtered searches (allowed_domains) failed with a proxy error.

@@ -1,0 +1,79 @@
+{
+ "paper": "The Godfrey Gazette",
+ "date": "2026-11-20",
+ "weekday": "Friday",
+ "generated_at": "2026-11-20T13:00:00Z",
+ "briefing": "The US and Iran traded strikes across the Gulf on Nov. 18, and Xi greeted Trump at the APEC summit. HHS approved Medicaid waivers for Native American traditional healing in Utah and Maine. Democrats in Georgia, Kansas and Texas see Medicaid expansion as a priority. In Idaho, a legislative report found drug possession prison sentences surged over two decades.",
+ "sections": [
+  {
+   "id": "world",
+   "name": "World and US",
+   "brief": "US and Iran trade strikes across the Gulf. Xi greets Trump at APEC.",
+   "articles": [
+    {
+     "id": "world-1",
+     "headline": "US and Iran trade strikes across the Gulf",
+     "source": "Reuters, via Just Security and Drop Site",
+     "summary": "US jets hit an Iranian missile site as Iran targets bases in Kuwait and Bahrain.",
+     "pages": 2
+    },
+    {
+     "id": "world-2",
+     "headline": "Xi greets Trump in Shenzhen at APEC summit",
+     "source": "Axios and Reuters, via Just Security",
+     "summary": "Xi met Trump on the tarmac; a three-way meeting with Putin is expected.",
+     "pages": 2
+    }
+   ]
+  },
+  {
+   "id": "biz",
+   "name": "Business and Healthcare",
+   "brief": "Medicaid waivers for Native healing; Democrats in holdout states eye expansion.",
+   "articles": [
+    {
+     "id": "biz-1",
+     "headline": "Utah and Maine to cover Native traditional healing in Medicaid",
+     "source": "KFF Health News",
+     "summary": "HHS approved waivers for Utah and Maine as Medicaid rules tighten.",
+     "pages": 3
+    },
+    {
+     "id": "biz-2",
+     "headline": "Democrats in holdout states eye Medicaid expansion",
+     "source": "KFF Health News",
+     "summary": "Georgia, Kansas and Texas Democrats call expansion a priority after midterm wins.",
+     "pages": 3
+    }
+   ]
+  },
+  {
+   "id": "idaho",
+   "name": "Idaho",
+   "brief": "Idaho prison sentences surged; Interfaith shelter moves; City Club honors Peterson-Stigers.",
+   "articles": [
+    {
+     "id": "idaho-1",
+     "headline": "Idaho drug possession prison sentences surged in two decades",
+     "source": "Boise State Public Radio",
+     "summary": "A watchdog report finds Idaho's prison population is among the nation's highest.",
+     "pages": 3
+    },
+    {
+     "id": "idaho-2",
+     "headline": "Interfaith Sanctuary says new Boise site changed its work",
+     "source": "Boise State Public Radio",
+     "summary": "Staff say the State Street shelter has changed how they help unhoused people.",
+     "pages": 3
+    },
+    {
+     "id": "idaho-3",
+     "headline": "Jodi Peterson-Stigers wins City Club of Boise civic award",
+     "source": "Boise State Public Radio",
+     "summary": "She received the 2026 Stimpson Award for Civic Engagement on Nov. 17.",
+     "pages": 3
+    }
+   ]
+  }
+ ]
+}
