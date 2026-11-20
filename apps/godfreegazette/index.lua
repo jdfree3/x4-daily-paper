@@ -524,9 +524,14 @@ local function draw_home(g)
   else
     text(g, MX, y + 12, S.date and pretty_short(S.date) or 'Loading...', 'small')
   end
-  button(g, W - MX - 190, y, 190, 44, 'Change edition', 'small', function()
-    if S.archive then S.sel = nil; go('editions') else do_refresh() end
-  end)
+  do  -- status (when there is one) takes the top right, where the old button was
+    local st = S.status
+    if not st and S.pf and S.pf.total > 0 then st = 'Saving stories ' .. S.pf.done .. '/' .. S.pf.total end
+    if st then
+      local ln = wrap(st, 'small', 190, 2)
+      for i, l in ipairs(ln) do text(g, W - MX - tw('small', l), y + 2 + (i - 1) * LH.small, l, 'small') end
+    end
+  end
   y = y + 56
   rule(g, y, MX, W - MX, 2); rule(g, y + 5, MX, W - MX, 1)
   y = y + 16
@@ -552,12 +557,15 @@ local function draw_home(g)
       y = y + rh
     end
   end
-  -- footer: status on the left, Refresh on the right
+  -- footer: the edition (tap to change it) on the left, Refresh on the right
   rule(g, H - 52, MX, W - MX, 1)
-  local st = S.status
-  if not st and S.pf and S.pf.total > 0 then st = 'Saving stories ' .. S.pf.done .. '/' .. S.pf.total end
-  if not st and idx then st = 'Edition ' .. idx.date end
-  if st then text(g, MX, H - 40, wrap(st, 'small', W - 2 * MX - 130, 1)[1] or '', 'small') end
+  local label = 'Edition: ' .. ((idx and pretty_short(idx.date, idx.weekday)) or (S.date and pretty_short(S.date)) or '...')
+  local bw = W - 2 * MX - 122
+  while tw('small', label) > bw - 52 and #label > 12 do label = label:sub(1, -2) end
+  button(g, MX, H - 46, bw, 38, label, 'small', function()
+    if S.archive then S.sel = nil; go('editions') else do_refresh() end
+  end)
+  g:polyline({ MX + bw - 28, H - 32, MX + bw - 20, H - 24, MX + bw - 12, H - 32 })   -- down chevron
   button(g, W - MX - 110, H - 46, 110, 38, 'Refresh', 'small', do_refresh)
 end
 
