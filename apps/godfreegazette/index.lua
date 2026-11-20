@@ -580,24 +580,46 @@ local function draw_home(g)
     end
     local room = (H - 64) - y
     local rh = math.max(52, math.min(briefs and 150 or 64, fl(room / math.max(1, #secs))))
+    -- biggest type that fits: (name font, summary font). Each row is as tall as its text needs and
+    -- the spare height is shared out, so a long summary does not force every row to be tall.
+    local right = W - MX - 34                          -- clear of the chevron
+    local plan = { 'medium', 'small' }
+    local plans = { { 'large', 'medium' }, { 'medium', 'medium' }, { 'medium', 'small' } }
+    local function need_of(sec, pl)
+      local cnt = stories(#(sec.articles or {}))
+      local nl = #wrap(sec.brief, pl[2], W - 2 * MX - 36, 8)
+      local inline = MX + 4 + tw(pl[1], sec.name) + 14 + tw('small', cnt) <= right
+      return 6 + LH[pl[1]] + 2 + nl * LH[pl[2]] + (inline and 0 or LH.small + 2) + 8, inline, cnt
+    end
+    local heights = {}
+    if briefs then
+      for _, pl in ipairs(plans) do
+        local total = 0
+        for _, sec in ipairs(secs) do total = total + need_of(sec, pl) + 6 end
+        if total <= room + 6 then plan = pl; break end
+      end
+      local total = 0
+      for i, sec in ipairs(secs) do heights[i] = need_of(sec, plan); total = total + heights[i] + 6 end
+      local extra = math.min(18, math.max(0, fl((room + 6 - total) / math.max(1, #secs))))
+      for i = 1, #secs do heights[i] = heights[i] + extra end
+    end
     for i, sec in ipairs(secs) do
-      g:rect(MX - 8, y, W - 2 * MX + 16, rh - 6, { line_width = 2 })
-      text(g, MX + 4, y + 6, sec.name, 'medium')
+      local bh = briefs and heights[i] or (rh - 6)
+      g:rect(MX - 8, y, W - 2 * MX + 16, bh, { line_width = 2 })
       if briefs then
-        local cnt = stories(#(sec.articles or {}))
-        local right = W - MX - 34                    -- clear of the chevron
-        local inline = MX + 4 + tw('medium', sec.name) + 14 + tw('small', cnt) <= right
-        if inline then text(g, right - tw('small', cnt), y + 6 + 3, cnt, 'small') end
-        local maxl = math.max(1, fl((rh - 6 - 6 - LH.medium - 6) / LH.small) - (inline and 0 or 1))
-        local by = y + 6 + LH.medium + 2
-        for _, ln in ipairs(wrap(sec.brief, 'small', W - 2 * MX - 36, maxl)) do text(g, MX + 4, by, ln, 'small'); by = by + LH.small end
-        if not inline then text(g, MX + 4, by, cnt, 'small') end
+        local _, inline, cnt = need_of(sec, plan)
+        text(g, MX + 4, y + 6, sec.name, plan[1])
+        if inline then text(g, right - tw('small', cnt), y + 6 + LH[plan[1]] - LH.small, cnt, 'small') end
+        local by = y + 6 + LH[plan[1]] + 2
+        for _, ln in ipairs(wrap(sec.brief, plan[2], W - 2 * MX - 36, 8)) do text(g, MX + 4, by, ln, plan[2]); by = by + LH[plan[2]] end
+        if not inline then text(g, MX + 4, by + 2, cnt, 'small') end
       else
+        text(g, MX + 4, y + 6, sec.name, 'medium')
         text(g, MX + 4, y + 6 + LH.medium, stories(#(sec.articles or {})), 'small')
       end
-      chevron_right(g, W - MX - 6, y + fl((rh - 6) / 2))
-      hit(MX - 8, y, W - 2 * MX + 16, rh - 6, function() S.sec = i; go('section') end)
-      y = y + rh
+      chevron_right(g, W - MX - 6, y + fl(bh / 2))
+      hit(MX - 8, y, W - 2 * MX + 16, bh, function() S.sec = i; go('section') end)
+      y = y + bh + 6
     end
   end
   -- footer: the edition (tap to change it) on the left, Refresh on the right
