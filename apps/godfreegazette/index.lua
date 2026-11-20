@@ -584,9 +584,14 @@ local function draw_home(g)
       g:rect(MX - 8, y, W - 2 * MX + 16, rh - 6, { line_width = 2 })
       text(g, MX + 4, y + 6, sec.name, 'medium')
       if briefs then
-        local maxl = math.max(1, fl((rh - 6 - 6 - LH.medium - 6) / LH.small))
+        local cnt = stories(#(sec.articles or {}))
+        local right = W - MX - 34                    -- clear of the chevron
+        local inline = MX + 4 + tw('medium', sec.name) + 14 + tw('small', cnt) <= right
+        if inline then text(g, right - tw('small', cnt), y + 6 + 3, cnt, 'small') end
+        local maxl = math.max(1, fl((rh - 6 - 6 - LH.medium - 6) / LH.small) - (inline and 0 or 1))
         local by = y + 6 + LH.medium + 2
         for _, ln in ipairs(wrap(sec.brief, 'small', W - 2 * MX - 36, maxl)) do text(g, MX + 4, by, ln, 'small'); by = by + LH.small end
+        if not inline then text(g, MX + 4, by, cnt, 'small') end
       else
         text(g, MX + 4, y + 6 + LH.medium, stories(#(sec.articles or {})), 'small')
       end
