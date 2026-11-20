@@ -44,6 +44,8 @@ for f in cfg.get("feeds", []):
                     d = d.replace(tzinfo=timezone.utc)
             except Exception:
                 continue
+            if "news.google.com" not in link:
+                link = link.split("?")[0] if ("at_medium" in link or "utm_" in link) else link
             if d < cutoff or not title or not link:
                 continue
             se = tag(it, "description", "summary")
