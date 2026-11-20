@@ -2,55 +2,174 @@
  "paper": "The Godfrey Gazette",
  "date": "2026-11-20",
  "weekday": "Friday",
- "generated_at": "2026-11-20T13:00:00Z",
- "briefing": "World and Tech are not covered today because no new stories could be confirmed. HHS approved Medicaid waivers for Native American traditional healing in Utah and Maine. Democrats in Georgia, Kansas and Texas see Medicaid expansion as a priority. In Idaho, a legislative report found drug possession prison sentences surged over two decades.",
+ "generated_at": "2026-11-20T23:58:47Z",
+ "briefing": "President Trump called his Asia trip a success despite few concrete results, and a second judge moved to block his planned arch. The White House fired its national cyber director after tech outages. The S&P 500 fell 3.7% in an AI stock sell-off, entering a correction. An Anthropic mathematician claimed a Riemann hypothesis proof, still unverified. In Idaho, lawmakers plan a bill to regulate e-motos.",
  "sections": [
+  {
+   "id": "world",
+   "name": "World and US",
+   "brief": "Trump's Asia trip yields few results; cyber director fired; arch blocked.",
+   "articles": [
+    {
+     "id": "world-1",
+     "headline": "Trump calls Asia trip a success, with few concrete results",
+     "source": "NPR",
+     "summary": "He announced joint AI guardrails with Xi but gave no details.",
+     "pages": 2
+    },
+    {
+     "id": "world-2",
+     "headline": "White House removes national cyber director after tech outages",
+     "source": "BBC",
+     "summary": "Sean Cairncross is out; Pentagon IT chief Kirsten Davies is named his successor.",
+     "pages": 2
+    },
+    {
+     "id": "world-3",
+     "headline": "Second judge blocks Trump's planned arch in Virginia",
+     "source": "NPR",
+     "summary": "Judge Brinkema will issue an injunction; the Justice Department will appeal.",
+     "pages": 2
+    },
+    {
+     "id": "world-4",
+     "headline": "Indian man sentenced to 19 years in plot to kill Sikh leader",
+     "source": "BBC",
+     "summary": "Nikhil Gupta got 235 months in the murder-for-hire plot targeting Gurpatwant Singh Pannun.",
+     "pages": 2
+    },
+    {
+     "id": "world-5",
+     "headline": "Denmark accuses Russia of plot to kill Ukrainian-American rapper",
+     "source": "BBC",
+     "summary": "Copenhagen will expel Russia's defence attache over a foiled September attack.",
+     "pages": 2
+    }
+   ]
+  },
+  {
+   "id": "tech",
+   "name": "Tech and AI",
+   "brief": "Trump threatens overseas data center ban; Anthropic Riemann claim; FCC vs California.",
+   "articles": [
+    {
+     "id": "tech-1",
+     "headline": "Trump threatens ban on US firms building AI data centers abroad",
+     "source": "BBC",
+     "summary": "He floated a \"tremendous tax\" with few details; enforcement is unclear.",
+     "pages": 1
+    },
+    {
+     "id": "tech-2",
+     "headline": "Anthropic mathematician claims Claude proved the Riemann hypothesis",
+     "source": "BBC",
+     "summary": "The claim is unverified; Terence Tao says checking it will take time.",
+     "pages": 2
+    },
+    {
+     "id": "tech-3",
+     "headline": "FCC tells California to stop enforcing phone rules against AT&T",
+     "source": "Ars Technica",
+     "summary": "The order lets AT&T end copper phone service for about 199,000 customers.",
+     "pages": 2
+    },
+    {
+     "id": "tech-4",
+     "headline": "Google redesigns search homepage around AI, drops search button",
+     "source": "Ars Technica",
+     "summary": "New buttons for image generation, file analysis and Gemini replace it.",
+     "pages": 1
+    },
+    {
+     "id": "tech-5",
+     "headline": "Meta reconsiders 2030 net-zero goal as AI data center emissions jump",
+     "source": "Ars Technica",
+     "summary": "Its 2026 report cites AI demand; emissions rose from 15.6 to 21.7 million tonnes.",
+     "pages": 1
+    }
+   ]
+  },
   {
    "id": "biz",
    "name": "Business and Healthcare",
-   "brief": "Medicaid waivers for Native healing; Democrats in holdout states eye expansion.",
+   "brief": "S&P 500 drops 3.7% in AI sell-off; Democrats probe rural health fund delay.",
    "articles": [
     {
      "id": "biz-1",
-     "headline": "Utah and Maine to cover Native traditional healing in Medicaid",
-     "source": "KFF Health News",
-     "summary": "HHS approved waivers for Utah and Maine as Medicaid rules tighten.",
-     "pages": 3
+     "headline": "S&P 500 falls 3.7% as AI stocks sell off, entering a correction",
+     "source": "NPR",
+     "summary": "Worst week in over 18 months; the Nasdaq is now negative for the year.",
+     "pages": 1
     },
     {
      "id": "biz-2",
-     "headline": "Democrats in holdout states eye Medicaid expansion",
+     "headline": "Democrats press Oz over delayed $50B rural health awards",
      "source": "KFF Health News",
-     "summary": "Georgia, Kansas and Texas Democrats call expansion a priority after midterm wins.",
-     "pages": 3
+     "summary": "18 lawmakers want answers on a nine-day delay and cuts in some states.",
+     "pages": 2
+    },
+    {
+     "id": "biz-3",
+     "headline": "FDA rejects Capricor's cell therapy for Duchenne",
+     "source": "STAT",
+     "summary": "Two trials failed to show deramiocel protected the heart or muscle function.",
+     "pages": 1
+    },
+    {
+     "id": "biz-4",
+     "headline": "HHS picks 15 groups to test food-as-medicine in Medicare",
+     "source": "STAT",
+     "summary": "The MAHA ELEVATE pilot will test whether lifestyle programs cut costs.",
+     "pages": 1
+    },
+    {
+     "id": "biz-5",
+     "headline": "Democrats set to widen probe of Obamacare coverage cancellations",
+     "source": "KFF Health News",
+     "summary": "A Senate inquiry into 760,000 cancellations gains weight with Democratic control.",
+     "pages": 2
     }
    ]
   },
   {
    "id": "idaho",
    "name": "Idaho",
-   "brief": "Idaho prison sentences surged; Interfaith shelter moves; City Club honors Peterson-Stigers.",
+   "brief": "E-moto bill planned; Medicaid work rule delay undecided; legislator pay frozen.",
    "articles": [
     {
      "id": "idaho-1",
-     "headline": "Idaho drug possession prison sentences surged in two decades",
-     "source": "Boise State Public Radio",
-     "summary": "A watchdog report finds Idaho's prison population is among the nation's highest.",
-     "pages": 3
+     "headline": "Idaho lawmakers plan bill to classify e-motos as motorcycles",
+     "source": "Idaho Capital Sun",
+     "summary": "Riders would need a motorcycle endorsement under the proposal.",
+     "pages": 2
     },
     {
      "id": "idaho-2",
-     "headline": "Interfaith Sanctuary says new Boise site changed its work",
-     "source": "Boise State Public Radio",
-     "summary": "Staff say the State Street shelter has changed how they help unhoused people.",
-     "pages": 3
+     "headline": "Idaho undecided on delaying Medicaid work requirements",
+     "source": "Idaho Capital Sun",
+     "summary": "Federal regulators moved the deadline from Jan. 1 to June 30.",
+     "pages": 2
     },
     {
      "id": "idaho-3",
-     "headline": "Jodi Peterson-Stigers wins City Club of Boise civic award",
-     "source": "Boise State Public Radio",
-     "summary": "She received the 2026 Stimpson Award for Civic Engagement on Nov. 17.",
-     "pages": 3
+     "headline": "Idaho legislator pay frozen for a year, then set to rise",
+     "source": "Idaho Capital Sun",
+     "summary": "A citizens committee voted 5-1 to hold pay at $25,000 until Dec. 2027.",
+     "pages": 1
+    },
+    {
+     "id": "idaho-4",
+     "headline": "Idaho providers weigh first year of federal rural health grant",
+     "source": "Idaho Capital Sun",
+     "summary": "Small clinics say they got no answers on denied applications.",
+     "pages": 2
+    },
+    {
+     "id": "idaho-5",
+     "headline": "Bird flu returns to dairy herds, including Idaho's",
+     "source": "Idaho Capital Sun",
+     "summary": "Officials urge USDA to speed a cattle vaccine framework.",
+     "pages": 1
     }
    ]
   }

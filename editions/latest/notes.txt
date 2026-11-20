@@ -1,4 +1,6 @@
-Edition 2026-11-20 notes:
-- World and Tech omitted: AP, NPR, BBC, Ars Technica blocked by the fetch tool and no new stories could be dated. Earlier stories were not repeated.
-- Business has two KFF Health News stories dated Nov 18. No market story could be dated.
-- Idaho stories come from Boise State Public Radio listing teasers only, so they are brief and url_verified is false.
+Edition 2026-11-20 (recompiled from pre-fetched feed data in sources/):
+- All 20 articles come from sources/articles with full text fetched by the feeds workflow; urls come from feed data, url_verified true.
+- Idaho is thin on outlet variety: only Idaho Capital Sun and Boise State Public Radio returned usable text. KIVI returned 0 items, KTVB items failed the keyword filter or fetch, Idaho Press returned HTTP error, Idaho Statesman timed out.
+- AP and Reuters pages cannot be fetched (blocked), so world and business coverage relies on BBC, NPR, KFF and STAT.
+- STAT+ items are paywalled stubs; biz-3 and biz-4 are brief for that reason.
+- idaho-5 (bird flu in dairy herds) is a multi-state story that mentions Idaho.
