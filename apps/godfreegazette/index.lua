@@ -582,14 +582,11 @@ local function draw_home(g)
     local rh = math.max(52, math.min(briefs and 150 or 64, fl(room / math.max(1, #secs))))
     -- biggest type that fits: (name font, summary font). Each row is as tall as its text needs and
     -- the spare height is shared out, so a long summary does not force every row to be tall.
-    local right = W - MX - 34                          -- clear of the chevron
+    local TW = W - 2 * MX - 56                         -- text column, clear of the number and chevron
     local plan = { 'medium', 'small' }
     local plans = { { 'large', 'medium' }, { 'medium', 'medium' }, { 'medium', 'small' } }
     local function need_of(sec, pl)
-      local cnt = stories(#(sec.articles or {}))
-      local nl = #wrap(sec.brief, pl[2], W - 2 * MX - 36, 8)
-      local inline = MX + 4 + tw(pl[1], sec.name) + 14 + tw('small', cnt) <= right
-      return 6 + LH[pl[1]] + 2 + nl * LH[pl[2]] + (inline and 0 or LH.small + 2) + 8, inline, cnt
+      return 6 + LH[pl[1]] + 2 + #wrap(sec.brief, pl[2], TW, 8) * LH[pl[2]] + 8
     end
     local heights = {}
     if briefs then
@@ -606,15 +603,13 @@ local function draw_home(g)
     for i, sec in ipairs(secs) do
       local bh = briefs and heights[i] or (rh - 6)
       g:rect(MX - 8, y, W - 2 * MX + 16, bh, { line_width = 2 })
+      text(g, MX + 4, y + 6, sec.name, briefs and plan[1] or 'medium')
       if briefs then
-        local _, inline, cnt = need_of(sec, plan)
-        text(g, MX + 4, y + 6, sec.name, plan[1])
-        if inline then text(g, right - tw('small', cnt), y + 6 + LH[plan[1]] - LH.small, cnt, 'small') end
         local by = y + 6 + LH[plan[1]] + 2
-        for _, ln in ipairs(wrap(sec.brief, plan[2], W - 2 * MX - 36, 8)) do text(g, MX + 4, by, ln, plan[2]); by = by + LH[plan[2]] end
-        if not inline then text(g, MX + 4, by + 2, cnt, 'small') end
+        for _, ln in ipairs(wrap(sec.brief, plan[2], TW, 8)) do text(g, MX + 4, by, ln, plan[2]); by = by + LH[plan[2]] end
+        local n = tostring(#(sec.articles or {}))        -- the story count, a number beside the arrow
+        text(g, W - MX - 28 - tw('large', n), y + fl((bh - LH.large) / 2), n, 'large')
       else
-        text(g, MX + 4, y + 6, sec.name, 'medium')
         text(g, MX + 4, y + 6 + LH.medium, stories(#(sec.articles or {})), 'small')
       end
       chevron_right(g, W - MX - 6, y + fl(bh / 2))
