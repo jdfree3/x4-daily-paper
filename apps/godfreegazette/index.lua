@@ -11,14 +11,15 @@
 -- px tall; a frame keeps about 1024 drawing commands; only GET and POST work on ctx.net; JSON is
 -- parsed here (a small decoder below) so the app does not depend on ctx.json's array handling.
 
-local W, H = 480, 800
+local W, H = 480, 792                        -- H is the layout height; the screen is 800 with TOP blank above
+local TOP = 8                                -- blank pixels above every screen
 local MX = 24
 local BASE = 'https://raw.githubusercontent.com/jdfree3/x4-daily-paper/main/'
 local UA = 'GodfreeGazette/0.1'
 local LH = { small = 20, medium = 24, large = 30 }
 local BODY_STEP = 28                       -- medium body text: 24 px line plus 4 px of leading
 local BODY_BOTTOM = H - 70                 -- the reading area ends here (progress bar below)
-local EXTRA_LINES = 8                      -- body lines worth of room the last page keeps for its buttons
+local EXTRA_LINES = 1                      -- the last page keeps one line for the source note; its buttons sit in the bottom strip
 local FULL_EVERY = 6                       -- full e-ink refresh every N page turns
 
 local MONTHS = { 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
@@ -509,7 +510,7 @@ end
 
 ------------------------------------------------------------------ drawing helpers
 
-local function hit(x, y, w, h, fn) S.hits[#S.hits + 1] = { x = x, y = y, w = w, h = h, fn = fn } end
+local function hit(x, y, w, h, fn) S.hits[#S.hits + 1] = { x = x, y = y + TOP, w = w, h = h, fn = fn } end
 local function text(g, x, y, s, name) g:text(x, y, s, { font = font(name) }) end
 local function rule(g, y, x1, x2, th)
   for i = 0, (th or 1) - 1 do g:line(x1 or MX, y + i, x2 or (W - MX), y + i) end
@@ -644,33 +645,38 @@ local function draw_section(g)
   if not sec then go('home'); return end
   local nsec = #idx.sections
   topbar(g, 'Front page', 'Section ' .. S.sec .. ' of ' .. nsec, function() go('home') end)
-  text(g, MX, 64, sec.name, 'large')
-  text(g, MX, 98, stories(#sec.articles), 'small')
-  rule(g, 124, MX, W - MX, 2); rule(g, 129, MX, W - MX, 1)
+  text(g, MX, 62, sec.name, 'large')
+  local cnt = stories(#sec.articles)
+  text(g, W - MX - tw('small', cnt), 70, cnt, 'small')
+  rule(g, 100, MX, W - MX, 2); rule(g, 105, MX, W - MX, 1)
+  local LIST_TOP, LIST_BOTTOM = 116, H - 40
   local items = {}
   for i, a in ipairs(sec.articles) do
-    local hl = wrap(a.headline or '', 'medium', W - 2 * MX, 2)
-    local sm = wrap(a.summary or '', 'small', W - 2 * MX, 2)
-    items[i] = { hl = hl, sm = sm, h = #hl * LH.medium + 4 + #sm * LH.small + 4 + LH.small + 16 }
+    local hl = wrap(a.headline or '', 'medium', W - 2 * MX, 3)
+    items[i] = { hl = hl, h = #hl * LH.medium + 6 + LH.small + 20 }
   end
-  local pages = paginate(items, (H - 56) - 140)
+  local pages = paginate(items, LIST_BOTTOM - LIST_TOP)
   if S.lpage > #pages then S.lpage = #pages end
   local pg = pages[S.lpage]
-  local y = 140
+  -- when the whole list fits, share the spare height between the stories
+  local extra = 0
+  if #pages == 1 and #items > 0 then
+    local used = 0
+    for _, it in ipairs(items) do used = used + it.h end
+    extra = math.min(16, math.max(0, fl((LIST_BOTTOM - LIST_TOP - used) / #items)))
+  end
+  local y = LIST_TOP
   for i = pg.from, pg.to do
     local it, a = items[i], sec.articles[i]
     local top = y
     for _, ln in ipairs(it.hl) do text(g, MX, y, ln, 'medium'); y = y + LH.medium end
-    y = y + 4
-    for _, ln in ipairs(it.sm) do text(g, MX, y, ln, 'small'); y = y + LH.small end
-    y = y + 4
-    local tail = ' - ' .. (a.pages or 1) .. (a.pages == 1 and ' page' or ' pages')
+    y = y + 6
     local src = tostring(a.source or '')
-    while #src > 1 and tw('small', src .. tail) > W - 2 * MX do src = src:sub(1, -2) end
-    text(g, MX, y, src .. tail, 'small')
-    y = y + LH.small + 8
+    while #src > 1 and tw('small', src) > W - 2 * MX do src = src:sub(1, -2) end
+    text(g, MX, y, src, 'small')
+    y = y + LH.small + 10 + fl(extra / 2)
     rule(g, y, MX, W - MX, 1)
-    y = y + 8
+    y = y + 10 + fl((extra + 1) / 2)
     hit(0, top, W, y - top, function() load_article(S.sec, i) end)
   end
   local nxt = idx.sections[S.sec + 1]
@@ -713,36 +719,27 @@ local function draw_read(g)
     y = 70
   end
   for i = P.from, P.to do text(g, MX, y, L.lines[i], 'medium'); y = y + BODY_STEP end
-  if S.pg == #L.pages then
-    if L.source then text(g, MX, y + 6, wrap(L.source, 'small', W - 2 * MX, 2)[1], 'small') end
-    local nxt = sec.articles[S.art + 1]
-    local by = BODY_BOTTOM - 56
-    if nxt then
-      local cy = by - 12 - 96
-      g:rect(MX, cy, W - 2 * MX, 96, { line_width = 2 })
-      text(g, MX + 12, cy + 8, 'NEXT IN ' .. string.upper(sec.name), 'small')
-      local nl = wrap(nxt.headline or '', 'medium', W - 2 * MX - 24, 2)
-      local ny = cy + 8 + LH.small + 4
-      for _, ln in ipairs(nl) do text(g, MX + 12, ny, ln, 'medium'); ny = ny + LH.medium end
-      hit(MX, cy, W - 2 * MX, 96, function() load_article(S.sec, S.art + 1) end)
-    end
-    local verified = S.cur and S.cur.url_verified == true and type(S.cur.url) == 'string'
-    if verified then
-      local bw = fl((W - 2 * MX - 12) / 2)
-      button(g, MX, by, bw, 56, 'Show QR code', 'small', function() S.qr = nil; go('qr') end)
-      button(g, MX + bw + 12, by, bw, 56, 'Back to section', 'small', function() S.want = nil; go('section') end)
-    else
-      button(g, MX, by, W - 2 * MX, 56, 'Back to section', 'small', function() S.want = nil; go('section') end)
-    end
-  end
-  -- progress bar and hints
   local n = #L.pages
-  g:rect(MX, H - 54, W - 2 * MX, 8, { line_width = 1 })
-  g:rect(MX, H - 54, math.max(4, fl((W - 2 * MX) * S.pg / n)), 8, { fill = true })
-  text(g, MX, H - 36, S.pg > 1 and 'Tap left: back' or 'Tap right: next page', 'small')
-  if S.pg > 1 and S.pg < n then
-    local t = 'Tap right: next page'
-    text(g, W - MX - tw('small', t), H - 36, t, 'small')
+  if S.pg == n then
+    if L.source then text(g, MX, y + 4, wrap(L.source, 'small', W - 2 * MX, 2)[1], 'small') end
+    local nxt = sec.articles[S.art + 1]
+    local verified = S.cur and S.cur.url_verified == true and type(S.cur.url) == 'string'
+    local btns = {}
+    if verified then btns[#btns + 1] = { 'QR code', function() S.qr = nil; go('qr') end } end
+    if nxt then btns[#btns + 1] = { 'Next story', function() load_article(S.sec, S.art + 1) end } end
+    btns[#btns + 1] = { 'Section', function() S.want = nil; go('section') end }
+    local gap = 8
+    local bw = fl((W - 2 * MX - gap * (#btns - 1)) / #btns)
+    for i, b in ipairs(btns) do button(g, MX + (i - 1) * (bw + gap), H - 62, bw, 50, b[1], 'small', b[2]) end
+  else
+    -- progress bar and hints
+    g:rect(MX, H - 54, W - 2 * MX, 8, { line_width = 1 })
+    g:rect(MX, H - 54, math.max(4, fl((W - 2 * MX) * S.pg / n)), 8, { fill = true })
+    text(g, MX, H - 36, S.pg > 1 and 'Tap left: back' or 'Tap right: next page', 'small')
+    if S.pg > 1 and S.pg < n then
+      local t = 'Tap right: next page'
+      text(g, W - MX - tw('small', t), H - 36, t, 'small')
+    end
   end
 end
 
@@ -866,9 +863,25 @@ end
 
 ------------------------------------------------------------------ host callbacks
 
+-- draws everything TOP pixels lower, so no screen has to know about the blank strip
+local function shifted(g)
+  local p = {}
+  function p.text(_, x, y, str, o) return g:text(x, y + TOP, str, o) end
+  function p.line(_, x1, y1, x2, y2, o) return g:line(x1, y1 + TOP, x2, y2 + TOP, o) end
+  function p.rect(_, x, y, w, h, o) return g:rect(x, y + TOP, w, h, o) end
+  function p.polyline(_, pts, o)
+    local q = {}
+    for i, v in ipairs(pts) do q[i] = (i % 2 == 0) and (v + TOP) or v end
+    return g:polyline(q, o)
+  end
+  function p.image(_, img, x, y, ...) return g:image(img, x, y + TOP, ...) end
+  return setmetatable(p, { __index = function(_, k) return function(_, ...) return g[k](g, ...) end end })
+end
+
 function on_draw(_, g)
   S.hits = {}
   g:clear(0)                                          -- own the whole frame, white
+  g = shifted(g)
   local sc = S.screen
   if sc == 'home' then draw_home(g)
   elseif sc == 'section' then draw_section(g)
