@@ -19,7 +19,7 @@ You are the editor of a small daily newspaper that is read on an Xteink X4 Pro e
 
 ## Pre-fetched feeds and article text
 
-A GitHub Actions workflow (.github/workflows/feeds.yml) runs daily at 12:00 UTC, runs tools/fetch_feeds.py, and commits two things:
+A GitHub Actions workflow (.github/workflows/feeds.yml) runs daily at about 11:17 UTC (GitHub may start scheduled runs late), runs tools/fetch_feeds.py, and commits two things:
 
 - sources/today.json: an index of recent items (last 60 hours) from the RSS feeds in config.json "feeds", each with section, source, title, url, published, summary, and has_text. It also has generated_at and feed_status.
 - sources/articles/<section>.json: for the newest items per section, the extracted article text (up to article_fetch.max_chars) in a "text" field, with "text_status". Google News links are resolved to the outlet URL when possible (url_resolved). Idaho items from the Statesman, KTVB and KIVI are kept only if the title or summary mentions an idaho_keywords term.
