@@ -1,6 +1,5 @@
-Edition 2026-11-20 (recompiled from pre-fetched feed data in sources/):
-- All 20 articles come from sources/articles with full text fetched by the feeds workflow; urls come from feed data, url_verified true.
-- Idaho is thin on outlet variety: only Idaho Capital Sun and Boise State Public Radio returned usable text. KIVI returned 0 items, KTVB items failed the keyword filter or fetch, Idaho Press returned HTTP error, Idaho Statesman timed out.
-- AP and Reuters pages cannot be fetched (blocked), so world and business coverage relies on BBC, NPR, KFF and STAT.
-- STAT+ items are paywalled stubs; biz-3 and biz-4 are brief for that reason.
-- idaho-5 (bird flu in dairy herds) is a multi-state story that mentions Idaho.
+Edition 2026-11-21 (compiled from pre-fetched feed data after the 5:48 run did not push):
+- 20 articles, all from sources/articles with feed text; url_verified true.
+- Idaho is thin on variety: only KIVI and Idaho Capital Sun had usable, non-repeat stories within 48 hours. idaho-4 and idaho-3 are national stories reported by the Idaho Capital Sun. E-motos and bird flu skipped as repeats.
+- Idaho Press and Idaho Statesman feeds failed.
+- AP and Reuters pages cannot be fetched.

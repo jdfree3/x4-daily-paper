@@ -1,0 +1,5 @@
+Edition 2026-11-21 (compiled from pre-fetched feed data after the 5:48 run did not push):
+- 20 articles, all from sources/articles with feed text; url_verified true.
+- Idaho is thin on variety: only KIVI and Idaho Capital Sun had usable, non-repeat stories within 48 hours. idaho-4 and idaho-3 are national stories reported by the Idaho Capital Sun. E-motos and bird flu skipped as repeats.
+- Idaho Press and Idaho Statesman feeds failed.
+- AP and Reuters pages cannot be fetched.
