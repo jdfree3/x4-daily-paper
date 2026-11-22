@@ -1,17 +1,17 @@
 {
- "date": "2026-11-21",
- "weekday": "Saturday",
- "word": "obdormition",
- "pron": "ob-dor-MISH-uhn",
- "pos": "noun",
- "definition": "The numbness felt in a limb that has fallen asleep, usually from pressure on a nerve.",
- "etymology": "From the Latin obdormire, to fall asleep.",
- "image": "cat-sleeping-curled-up",
- "connection": "A cat curled up asleep on a lap is the classic cause of a leg falling asleep.",
- "generated_at": "2026-11-21T12:24:08Z",
+ "date": "2026-11-22",
+ "weekday": "Sunday",
+ "word": "pavid",
+ "pron": "PAV-id",
+ "pos": "adjective",
+ "definition": "Timid or fearful; easily frightened.",
+ "etymology": "",
+ "image": "hare-sitting",
+ "connection": "The hare is the classic skittish creature, always poised to bolt, so a pavid animal.",
+ "generated_at": "2026-11-22T12:23:57Z",
  "word_img": {
   "file": "word.jpg",
-  "w": 328,
-  "h": 61
+  "w": 178,
+  "h": 73
  }
 }
