@@ -1,0 +1,3 @@
+Edition 2026-11-22 (compiled from pre-fetched feed data; url_verified true).
+- Idaho is thin: 3 articles. Only Idaho Capital Sun and Boise State Public Radio had usable non-repeat Idaho stories; two items are from Nov 19 (outside the 48 hour window) because nothing newer was available. Idaho Press and Idaho Statesman feeds failed.
+- Skipped repeats: e-motos, bird flu, Caldwell, prison report.

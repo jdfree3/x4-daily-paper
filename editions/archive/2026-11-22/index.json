@@ -1,0 +1,163 @@
+{
+ "paper": "The Godfrey Gazette",
+ "date": "2026-11-22",
+ "weekday": "Sunday",
+ "generated_at": "2026-11-22T12:55:00Z",
+ "briefing": "New York Mayor Zohran Mamdani unveiled a plan to close Rikers Island by 2032, and the FBI is reportedly investigating an apparent hack of its criminal database. An Anthropic staffer claims he and Claude found a proof of the Riemann Hypothesis, though the claim has yet to be verified. In business, an Ohio steel mill dropped a plan to cut coal use, and the ICE detention of a Princeton researcher worried international scholars. In Idaho, health officials want a 13% raise for disability caregivers.",
+ "sections": [
+  {
+   "id": "world",
+   "name": "World and US",
+   "brief": "Rikers closure plan by 2032; FBI database breach probe reported.",
+   "articles": [
+    {
+     "id": "world-1",
+     "headline": "Mamdani unveils plan to close Rikers Island by 2032",
+     "source": "BBC",
+     "summary": "Plan would close the jail and open four new ones, with far fewer detainees.",
+     "pages": 2
+    },
+    {
+     "id": "world-2",
+     "headline": "FBI reportedly probing apparent hack of criminal database",
+     "source": "BBC",
+     "summary": "The NCIC database is used by police nationwide to check warrants.",
+     "pages": 2
+    },
+    {
+     "id": "world-3",
+     "headline": "Trump calls air traffic systems 'ancient' but safe after ground stop",
+     "source": "BBC",
+     "summary": "He urged Congress to fund upgrades a week after a four-hour nationwide stop.",
+     "pages": 2
+    },
+    {
+     "id": "world-4",
+     "headline": "Fined $811m, immigrant bail firms' scams reportedly went on",
+     "source": "BBC",
+     "summary": "BBC finds linked companies kept taking money from detainees' families.",
+     "pages": 2
+    },
+    {
+     "id": "world-5",
+     "headline": "Effort to bypass the Electoral College could hit key milestone",
+     "source": "NPR",
+     "summary": "Democratic wins in five states could push the compact past 270 votes.",
+     "pages": 2
+    }
+   ]
+  },
+  {
+   "id": "tech",
+   "name": "Tech and AI",
+   "brief": "AI-assisted Riemann Hypothesis claim; honey-trap warnings for AI leaders.",
+   "articles": [
+    {
+     "id": "tech-1",
+     "headline": "Anthropic staffer claims AI-assisted Riemann proof",
+     "source": "NPR",
+     "summary": "Experts say verifying the claim will take time.",
+     "pages": 2
+    },
+    {
+     "id": "tech-2",
+     "headline": "Experts warn AI leaders are open to honey-trap schemes",
+     "source": "TechCrunch",
+     "summary": "Counterintelligence specialists say founders and staff are prime targets.",
+     "pages": 2
+    },
+    {
+     "id": "tech-3",
+     "headline": "Daniel Ek backs AI researcher's fusion power startup",
+     "source": "TechCrunch",
+     "summary": "Europa Fusion plans a simulation-heavy approach to pulsed-power fusion.",
+     "pages": 2
+    },
+    {
+     "id": "tech-4",
+     "headline": "Wired: a probe heads back to planetary-defense test asteroids",
+     "source": "Wired",
+     "summary": "The visit follows NASA's test of deflecting an asteroid four years ago.",
+     "pages": 2
+    },
+    {
+     "id": "tech-5",
+     "headline": "Astronomers watch a giant star swallow its neighbor",
+     "source": "Ars Technica",
+     "summary": "A Nature study caught common envelope evolution from start to finish.",
+     "pages": 2
+    }
+   ]
+  },
+  {
+   "id": "biz",
+   "name": "Business and Healthcare",
+   "brief": "Ohio steel plant reverses clean-up plan; ICE detains Princeton researcher.",
+   "articles": [
+    {
+     "id": "biz-1",
+     "headline": "Ohio steel mill drops plan to cut coal use under Trump",
+     "source": "NPR",
+     "summary": "Middletown residents face soot while the administration backs fossil fuels.",
+     "pages": 2
+    },
+    {
+     "id": "biz-2",
+     "headline": "Princeton researcher's ICE detention rattles academia",
+     "source": "STAT News",
+     "summary": "International scientists question whether conference travel is safe.",
+     "pages": 2
+    },
+    {
+     "id": "biz-3",
+     "headline": "NPR explains how Trump's crypto ventures built his wealth",
+     "source": "NPR",
+     "summary": "One think tank puts family earnings near $3 billion, mostly from crypto.",
+     "pages": 2
+    },
+    {
+     "id": "biz-4",
+     "headline": "Planet Money: how exposed is the US to cyberattacks?",
+     "source": "NPR",
+     "summary": "A week of outages raised concern about aging systems and fast-moving AI.",
+     "pages": 2
+    },
+    {
+     "id": "biz-5",
+     "headline": "UK households face energy bill rise of 443 pounds from January",
+     "source": "BBC",
+     "summary": "A Devon charity offers drop-in sessions on bills and heating oil costs.",
+     "pages": 2
+    }
+   ]
+  },
+  {
+   "id": "idaho",
+   "name": "Idaho",
+   "brief": "Botanical garden expands; officials seek caregiver raise.",
+   "articles": [
+    {
+     "id": "idaho-1",
+     "headline": "Idaho Botanical Garden nearly doubles in size",
+     "source": "Boise State Public Radio",
+     "summary": "A 10-acre expansion adds an arboretum, event lawn and bike garden.",
+     "pages": 2
+    },
+    {
+     "id": "idaho-2",
+     "headline": "Idaho health officials seek 13% raise for disability caregivers",
+     "source": "Idaho Capital Sun",
+     "summary": "The request is a rare exception to the governor's barebones budget rule.",
+     "pages": 2
+    },
+    {
+     "id": "idaho-3",
+     "headline": "House panel backs psychedelic care for veterans, with questions",
+     "source": "Idaho Capital Sun",
+     "summary": "Lawmakers questioned whether the VA could meet patient needs if the FDA approves.",
+     "pages": 2
+    }
+   ]
+  }
+ ]
+}

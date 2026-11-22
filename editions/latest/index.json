@@ -1,48 +1,48 @@
 {
  "paper": "The Godfrey Gazette",
- "date": "2026-11-21",
- "weekday": "Saturday",
- "generated_at": "2026-11-21T16:30:00Z",
- "briefing": "COP31 climate talks in Turkey are deadlocked over fossil fuels, and UN talks on killer robots ended without binding rules. Nasdaq fell 10% for the week as the AI boom showed strain, with Anthropic closing near its IPO price. A judge approved a $7.25bn Roundup settlement, and the UK and EU agreed a trade deal. A jury convicted the man behind the Palisades Fire. In Idaho, a state report tied prison growth to drug charges.",
+ "date": "2026-11-22",
+ "weekday": "Sunday",
+ "generated_at": "2026-11-22T12:55:00Z",
+ "briefing": "New York Mayor Zohran Mamdani unveiled a plan to close Rikers Island by 2032, and the FBI is reportedly investigating an apparent hack of its criminal database. An Anthropic staffer claims he and Claude found a proof of the Riemann Hypothesis, though the claim has yet to be verified. In business, an Ohio steel mill dropped a plan to cut coal use, and the ICE detention of a Princeton researcher worried international scholars. In Idaho, health officials want a 13% raise for disability caregivers.",
  "sections": [
   {
    "id": "world",
    "name": "World and US",
-   "brief": "COP31 talks are deadlocked over fossil fuels. UN talks on killer robots ended without binding rules.",
+   "brief": "Rikers closure plan by 2032; FBI database breach probe reported.",
    "articles": [
     {
      "id": "world-1",
-     "headline": "COP31 climate talks deadlocked over fossil fuels",
+     "headline": "Mamdani unveils plan to close Rikers Island by 2032",
      "source": "BBC",
-     "summary": "Talks in Turkey ran past their deadline as nations split on fossil fuel language.",
+     "summary": "Plan would close the jail and open four new ones, with far fewer detainees.",
      "pages": 2
     },
     {
      "id": "world-2",
-     "headline": "UN talks on killer robots end with no binding rules",
-     "source": "NPR",
-     "summary": "Countries get two years to propose rules, which may not be legally binding.",
+     "headline": "FBI reportedly probing apparent hack of criminal database",
+     "source": "BBC",
+     "summary": "The NCIC database is used by police nationwide to check warrants.",
      "pages": 2
     },
     {
      "id": "world-3",
-     "headline": "Zelensky defends Crimean Bridge strikes as a fair response",
+     "headline": "Trump calls air traffic systems 'ancient' but safe after ground stop",
      "source": "BBC",
-     "summary": "He says Russia attacked bridges in Ukraine 109 times and wants a reason to escalate.",
+     "summary": "He urged Congress to fund upgrades a week after a four-hour nationwide stop.",
      "pages": 2
     },
     {
      "id": "world-4",
-     "headline": "Jury convicts man of starting the deadly Palisades Fire",
-     "source": "NPR",
-     "summary": "Jonathan Rinderknecht was found guilty on both federal counts after an earlier mistrial.",
+     "headline": "Fined $811m, immigrant bail firms' scams reportedly went on",
+     "source": "BBC",
+     "summary": "BBC finds linked companies kept taking money from detainees' families.",
      "pages": 2
     },
     {
      "id": "world-5",
-     "headline": "Mexican cartel boss on FBI most wanted list arrested",
-     "source": "BBC",
-     "summary": "Fausto Isidro Meza Flores was captured after a shoot-out in Sinaloa.",
+     "headline": "Effort to bypass the Electoral College could hit key milestone",
+     "source": "NPR",
+     "summary": "Democratic wins in five states could push the compact past 270 votes.",
      "pages": 2
     }
    ]
@@ -50,41 +50,41 @@
   {
    "id": "tech",
    "name": "Tech and AI",
-   "brief": "Outages tied to AI-era patching strain; a leak test hits AI routers. Anthropic faces its safety test.",
+   "brief": "AI-assisted Riemann Hypothesis claim; honey-trap warnings for AI leaders.",
    "articles": [
     {
      "id": "tech-1",
-     "headline": "Wired: the recent tech outages may be a sign of more to come",
-     "source": "Wired",
-     "summary": "Experts say AI-driven bug hunting is straining patching, not that AI caused the outages.",
+     "headline": "Anthropic staffer claims AI-assisted Riemann proof",
+     "source": "NPR",
+     "summary": "Experts say verifying the claim will take time.",
      "pages": 2
     },
     {
      "id": "tech-2",
-     "headline": "Test with 2 million decoy secrets finds leaks in AI routers",
-     "source": "Ars Technica",
-     "summary": "Researcher HD Moore says some AI providers were compromised or ignored privacy flags.",
+     "headline": "Experts warn AI leaders are open to honey-trap schemes",
+     "source": "TechCrunch",
+     "summary": "Counterintelligence specialists say founders and staff are prime targets.",
      "pages": 2
     },
     {
      "id": "tech-3",
-     "headline": "House Intel chair-elect threatens SpaceX funding over Starshield",
-     "source": "Ars Technica",
-     "summary": "Rep. Jim Himes cites SpaceX service changes in Ukraine and slow answers to Congress.",
+     "headline": "Daniel Ek backs AI researcher's fusion power startup",
+     "source": "TechCrunch",
+     "summary": "Europa Fusion plans a simulation-heavy approach to pulsed-power fusion.",
      "pages": 2
     },
     {
      "id": "tech-4",
-     "headline": "Anthropic faces test of its safety pledge as a public company",
-     "source": "NPR",
-     "summary": "Critics ask if shareholder pressure could shape decisions about risky models.",
+     "headline": "Wired: a probe heads back to planetary-defense test asteroids",
+     "source": "Wired",
+     "summary": "The visit follows NASA's test of deflecting an asteroid four years ago.",
      "pages": 2
     },
     {
      "id": "tech-5",
-     "headline": "Startup sues Apple in India over NameDrop contact sharing",
-     "source": "TechCrunch",
-     "summary": "GG Technologies seeks about $162 million and an injunction in Bombay High Court.",
+     "headline": "Astronomers watch a giant star swallow its neighbor",
+     "source": "Ars Technica",
+     "summary": "A Nature study caught common envelope evolution from start to finish.",
      "pages": 2
     }
    ]
@@ -92,41 +92,41 @@
   {
    "id": "biz",
    "name": "Business and Healthcare",
-   "brief": "The Nasdaq fell 10% in a week. A $7.25bn Roundup settlement won approval, and the UK and EU struck a deal.",
+   "brief": "Ohio steel plant reverses clean-up plan; ICE detains Princeton researcher.",
    "articles": [
     {
      "id": "biz-1",
-     "headline": "Nasdaq drops 10% in a week as AI boom shows strain",
+     "headline": "Ohio steel mill drops plan to cut coal use under Trump",
      "source": "NPR",
-     "summary": "The S&P 500 and Dow both closed in correction territory.",
+     "summary": "Middletown residents face soot while the administration backs fossil fuels.",
      "pages": 2
     },
     {
      "id": "biz-2",
-     "headline": "Judge approves $7.25bn Roundup cancer settlement",
-     "source": "BBC",
-     "summary": "Bayer will pay into a fund for up to 21 years for current and future claimants.",
+     "headline": "Princeton researcher's ICE detention rattles academia",
+     "source": "STAT News",
+     "summary": "International scientists question whether conference travel is safe.",
      "pages": 2
     },
     {
      "id": "biz-3",
-     "headline": "UK and EU agree trade deal; Burnham sees up to 17bn pounds a year",
-     "source": "BBC",
-     "summary": "The deal scraps most food export checks and adds a youth experience scheme.",
+     "headline": "NPR explains how Trump's crypto ventures built his wealth",
+     "source": "NPR",
+     "summary": "One think tank puts family earnings near $3 billion, mostly from crypto.",
      "pages": 2
     },
     {
      "id": "biz-4",
-     "headline": "GTA 6 takes in $3.8bn in its first full day, a record",
-     "source": "BBC",
-     "summary": "Take-Two says it is the biggest entertainment launch ever.",
+     "headline": "Planet Money: how exposed is the US to cyberattacks?",
+     "source": "NPR",
+     "summary": "A week of outages raised concern about aging systems and fast-moving AI.",
      "pages": 2
     },
     {
      "id": "biz-5",
-     "headline": "Airbnb limits chores hosts can demand of guests",
+     "headline": "UK households face energy bill rise of 443 pounds from January",
      "source": "BBC",
-     "summary": "Some hosts say the new rules could push cleaning costs onto customers.",
+     "summary": "A Devon charity offers drop-in sessions on bills and heating oil costs.",
      "pages": 2
     }
    ]
@@ -134,34 +134,27 @@
   {
    "id": "idaho",
    "name": "Idaho",
-   "brief": "Caldwell lights up for Winter Wonderland. A state report ties prison growth to drug charges.",
+   "brief": "Botanical garden expands; officials seek caregiver raise.",
    "articles": [
     {
      "id": "idaho-1",
-     "headline": "Caldwell Winter Wonderland opens, drawing Treasure Valley families",
-     "source": "KIVI",
-     "summary": "The annual festival has lit up downtown after months of preparation.",
+     "headline": "Idaho Botanical Garden nearly doubles in size",
+     "source": "Boise State Public Radio",
+     "summary": "A 10-acre expansion adds an arboretum, event lawn and bike garden.",
      "pages": 2
     },
     {
      "id": "idaho-2",
-     "headline": "Report: drug charges drive Idaho prison growth",
+     "headline": "Idaho health officials seek 13% raise for disability caregivers",
      "source": "Idaho Capital Sun",
-     "summary": "State watchdog says Idaho jails women at the nation's highest rate.",
+     "summary": "The request is a rare exception to the governor's barebones budget rule.",
      "pages": 2
     },
     {
      "id": "idaho-3",
-     "headline": "Veterans oppose House benefits bill, citing disability cuts",
+     "headline": "House panel backs psychedelic care for veterans, with questions",
      "source": "Idaho Capital Sun",
-     "summary": "The Take Care of America's Veterans Act trims some future disability support.",
-     "pages": 2
-    },
-    {
-     "id": "idaho-4",
-     "headline": "Trump says he will veto bills but sees room for deal on healthcare",
-     "source": "Idaho Capital Sun",
-     "summary": "He expects many vetoes from a Democratic Congress, then talks.",
+     "summary": "Lawmakers questioned whether the VA could meet patient needs if the FDA approves.",
      "pages": 2
     }
    ]
