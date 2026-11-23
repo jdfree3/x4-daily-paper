@@ -1,48 +1,48 @@
 {
  "paper": "The Godfrey Gazette",
- "date": "2026-11-22",
- "weekday": "Sunday",
- "generated_at": "2026-11-22T12:55:00Z",
- "briefing": "New York Mayor Zohran Mamdani unveiled a plan to close Rikers Island by 2032, and the FBI is reportedly investigating an apparent hack of its criminal database. An Anthropic staffer claims he and Claude found a proof of the Riemann Hypothesis, though the claim has yet to be verified. In business, an Ohio steel mill dropped a plan to cut coal use, and the ICE detention of a Princeton researcher worried international scholars. In Idaho, health officials want a 13% raise for disability caregivers.",
+ "date": "2026-11-23",
+ "weekday": "Monday",
+ "generated_at": "2026-11-23T13:10:00Z",
+ "briefing": "An Army plan to detonate Iowa explosives proceeds despite a court order, and COP31 climate talks collapsed over fossil fuels. President Trump told federal contractors to clear replies to Congress. Google staff joined protests over AI in school search, and Signal limited mobile screenshots. UK energy bills are set to jump in January, and Medicare open enrollment ends Dec. 7. In Idaho, San Diego State upset Boise State 22-20.",
  "sections": [
   {
    "id": "world",
    "name": "World and US",
-   "brief": "Rikers closure plan by 2032; FBI database breach probe reported.",
+   "brief": "Army to detonate Iowa explosives despite court order, Trump order on contractors, COP31 collapse.",
    "articles": [
     {
      "id": "world-1",
-     "headline": "Mamdani unveils plan to close Rikers Island by 2032",
-     "source": "BBC",
-     "summary": "Plan would close the jail and open four new ones, with far fewer detainees.",
+     "headline": "Army plans Iowa explosives detonation despite court order",
+     "source": "BBC News",
+     "summary": "The US Army says it will go ahead with detonating about five tonnes of degraded explosives in Iowa, even though a court ordered a halt.",
      "pages": 2
     },
     {
      "id": "world-2",
-     "headline": "FBI reportedly probing apparent hack of criminal database",
-     "source": "BBC",
-     "summary": "The NCIC database is used by police nationwide to check warrants.",
+     "headline": "Lebanese villagers return to wrecked homes as Israel pulls back",
+     "source": "NPR",
+     "summary": "Residents of southern Lebanon are returning to damaged homes as the Israeli army pulls back from the area.",
      "pages": 2
     },
     {
      "id": "world-3",
-     "headline": "Trump calls air traffic systems 'ancient' but safe after ground stop",
-     "source": "BBC",
-     "summary": "He urged Congress to fund upgrades a week after a four-hour nationwide stop.",
+     "headline": "Russia-bound ship towed after drone attack in Gulf of Finland",
+     "source": "BBC News",
+     "summary": "A Russian cargo ship hit by a drone attack in the eastern Gulf of Finland is being towed away, authorities said.",
      "pages": 2
     },
     {
      "id": "world-4",
-     "headline": "Fined $811m, immigrant bail firms' scams reportedly went on",
-     "source": "BBC",
-     "summary": "BBC finds linked companies kept taking money from detainees' families.",
-     "pages": 2
+     "headline": "Climate talks collapse over fossil fuels",
+     "source": "NPR",
+     "summary": "UN climate talks in Antalya, Turkey, broke down in overtime on Sunday when nearly 200 countries could not agree on moving away from fossi...",
+     "pages": 1
     },
     {
      "id": "world-5",
-     "headline": "Effort to bypass the Electoral College could hit key milestone",
+     "headline": "Trump order tells contractors to clear Congress replies",
      "source": "NPR",
-     "summary": "Democratic wins in five states could push the compact past 270 votes.",
+     "summary": "President Trump signed an executive order late Friday directing federal contractors and subcontractors to consult his administration abou...",
      "pages": 2
     }
    ]
@@ -50,41 +50,41 @@
   {
    "id": "tech",
    "name": "Tech and AI",
-   "brief": "AI-assisted Riemann Hypothesis claim; honey-trap warnings for AI leaders.",
+   "brief": "Data center backlash, Google staff protest AI in schools, Signal limits screenshots, banks restrict AI agents.",
    "articles": [
     {
      "id": "tech-1",
-     "headline": "Anthropic staffer claims AI-assisted Riemann proof",
-     "source": "NPR",
-     "summary": "Experts say verifying the claim will take time.",
+     "headline": "Why data centers sit at the center of tech backlash",
+     "source": "TechCrunch",
+     "summary": "Opposition to data centers has become a political force, and author Paris Marx says it helped drive the Democratic wave in the recent mid...",
      "pages": 2
     },
     {
      "id": "tech-2",
-     "headline": "Experts warn AI leaders are open to honey-trap schemes",
-     "source": "TechCrunch",
-     "summary": "Counterintelligence specialists say founders and staff are prime targets.",
+     "headline": "Google staff join protest over AI in school search",
+     "source": "NPR",
+     "summary": "More than 550 Google employees have signed a petition asking the company to let schools use Search without AI.",
      "pages": 2
     },
     {
      "id": "tech-3",
-     "headline": "Daniel Ek backs AI researcher's fusion power startup",
+     "headline": "Signal limits mobile screenshots over AI agent privacy risk",
      "source": "TechCrunch",
-     "summary": "Europa Fusion plans a simulation-heavy approach to pulsed-power fusion.",
+     "summary": "Signal said Friday it is limiting screenshots inside its app on mobile devices.",
      "pages": 2
     },
     {
      "id": "tech-4",
-     "headline": "Wired: a probe heads back to planetary-defense test asteroids",
+     "headline": "Banks push back on customers using AI agents",
      "source": "Wired",
-     "summary": "The visit follows NASA's test of deflecting an asteroid four years ago.",
-     "pages": 2
+     "summary": "Wells Fargo will put updated terms into effect on Tuesday that warn customers that use of any AI agent is at their own risk.",
+     "pages": 1
     },
     {
      "id": "tech-5",
-     "headline": "Astronomers watch a giant star swallow its neighbor",
-     "source": "Ars Technica",
-     "summary": "A Nature study caught common envelope evolution from start to finish.",
+     "headline": "Delta flights in Atlanta delayed by weight system outage",
+     "source": "The Verge",
+     "summary": "Delta flights in and out of Atlanta faced significant delays on Sunday because of a problem with the system that calculates a plane's wei...",
      "pages": 2
     }
    ]
@@ -92,70 +92,63 @@
   {
    "id": "biz",
    "name": "Business and Healthcare",
-   "brief": "Ohio steel plant reverses clean-up plan; ICE detains Princeton researcher.",
+   "brief": "UK energy bills set to jump, a small-business loan trap, Medicare open enrollment, telehealth peptides.",
    "articles": [
     {
      "id": "biz-1",
-     "headline": "Ohio steel mill drops plan to cut coal use under Trump",
-     "source": "NPR",
-     "summary": "Middletown residents face soot while the administration backs fossil fuels.",
-     "pages": 2
+     "headline": "Centrica chief alarmed as UK energy bills set to jump",
+     "source": "BBC News",
+     "summary": "The chief executive of British Gas owner Centrica says he is hugely concerned about the expected jump in UK energy bills in January.",
+     "pages": 1
     },
     {
      "id": "biz-2",
-     "headline": "Princeton researcher's ICE detention rattles academia",
-     "source": "STAT News",
-     "summary": "International scientists question whether conference travel is safe.",
+     "headline": "Small-business cash advance left owner in a seven-year fight",
+     "source": "NPR",
+     "summary": "NPR profiles Vahe Shahinian, a Los Angeles ticketing and concert promoter who took a deal in 2019 that a broker pitched as a 750,000 doll...",
      "pages": 2
     },
     {
      "id": "biz-3",
-     "headline": "NPR explains how Trump's crypto ventures built his wealth",
+     "headline": "Medicare open enrollment runs through Dec. 7",
      "source": "NPR",
-     "summary": "One think tank puts family earnings near $3 billion, mostly from crypto.",
-     "pages": 2
+     "summary": "Open enrollment is underway for Medicare, which covers roughly 70 million people, and runs through Dec.",
+     "pages": 1
     },
     {
      "id": "biz-4",
-     "headline": "Planet Money: how exposed is the US to cyberattacks?",
-     "source": "NPR",
-     "summary": "A week of outages raised concern about aging systems and fast-moving AI.",
+     "headline": "Hims and Noom move into unapproved peptide drugs",
+     "source": "STAT News",
+     "summary": "Telehealth firms Hims & Hers and Noom are expanding into synthetic peptides, drugs long popular with bodybuilders and marketed for muscle...",
      "pages": 2
     },
     {
      "id": "biz-5",
-     "headline": "UK households face energy bill rise of 443 pounds from January",
-     "source": "BBC",
-     "summary": "A Devon charity offers drop-in sessions on bills and heating oil costs.",
-     "pages": 2
+     "headline": "AI speeds early drug development at big pharma",
+     "source": "STAT News",
+     "summary": "Artificial intelligence has sped early-stage drug development at some of the world's largest drugmakers this year, cutting by as much as ...",
+     "pages": 1
     }
    ]
   },
   {
    "id": "idaho",
    "name": "Idaho",
-   "brief": "Botanical garden expands; officials seek caregiver raise.",
+   "brief": "San Diego State upsets Boise State; wet, snowy week boosts Idaho ski resorts.",
    "articles": [
     {
      "id": "idaho-1",
-     "headline": "Idaho Botanical Garden nearly doubles in size",
-     "source": "Boise State Public Radio",
-     "summary": "A 10-acre expansion adds an arboretum, event lawn and bike garden.",
+     "headline": "San Diego State upsets No. 15 Boise State 22-20",
+     "source": "KIVI / AP",
+     "summary": "Cooper DiLeva kicked a 42-yard field goal as time expired, and San Diego State scored nine points in the last two minutes to beat No.",
      "pages": 2
     },
     {
      "id": "idaho-2",
-     "headline": "Idaho health officials seek 13% raise for disability caregivers",
-     "source": "Idaho Capital Sun",
-     "summary": "The request is a rare exception to the governor's barebones budget rule.",
-     "pages": 2
-    },
-    {
-     "id": "idaho-3",
-     "headline": "House panel backs psychedelic care for veterans, with questions",
-     "source": "Idaho Capital Sun",
-     "summary": "Lawmakers questioned whether the VA could meet patient needs if the FDA approves.",
-     "pages": 2
+     "headline": "Wet, cool weather boosts Idaho ski resorts",
+     "source": "KIVI",
+     "summary": "Another round of rain and snow is headed for Idaho, and cooler weather will stick around.",
+     "pages": 1
     }
    ]
   }

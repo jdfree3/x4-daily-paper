@@ -1,0 +1,3 @@
+Edition 2026-11-23 (compiled from pre-fetched feed data; url_verified true).
+- Idaho is thin: 2 articles. The Idaho feeds had only two usable non-repeat items inside the window; Idaho Capital Sun items were from Nov 20 or earlier and Boise State Public Radio returned none. Idaho Press and Idaho Statesman feeds failed.
+- Hims/Noom and AI drug development items are from Nov 20 STAT newsletters (urls are newsletter pages).
