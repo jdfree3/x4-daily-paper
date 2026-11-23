@@ -1,17 +1,17 @@
 {
- "date": "2026-11-22",
- "weekday": "Sunday",
- "word": "pavid",
- "pron": "PAV-id",
+ "date": "2026-11-23",
+ "weekday": "Monday",
+ "word": "empyreumatic",
+ "pron": "em-pih-roo-MAT-ik",
  "pos": "adjective",
- "definition": "Timid or fearful; easily frightened.",
+ "definition": "Having the smell or taste of burnt organic matter, such as smoky oils or scorched wood.",
  "etymology": "",
- "image": "hare-sitting",
- "connection": "The hare is the classic skittish creature, always poised to bolt, so a pavid animal.",
- "generated_at": "2026-11-22T12:23:57Z",
+ "image": "cowboy-by-campfire",
+ "connection": "A campfire scorches wood and coffee, giving the acrid smoky smell this word names.",
+ "generated_at": "2026-11-23T12:24:23Z",
  "word_img": {
   "file": "word.jpg",
-  "w": 178,
-  "h": 73
+  "w": 325,
+  "h": 52
  }
 }
