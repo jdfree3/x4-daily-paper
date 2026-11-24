@@ -1,17 +1,17 @@
 {
- "date": "2026-11-23",
- "weekday": "Monday",
- "word": "empyreumatic",
- "pron": "em-pih-roo-MAT-ik",
- "pos": "adjective",
- "definition": "Having the smell or taste of burnt organic matter, such as smoky oils or scorched wood.",
- "etymology": "",
- "image": "cowboy-by-campfire",
- "connection": "A campfire scorches wood and coffee, giving the acrid smoky smell this word names.",
- "generated_at": "2026-11-23T12:24:23Z",
+ "date": "2026-11-24",
+ "weekday": "Tuesday",
+ "word": "alectryomancy",
+ "pron": "uh-LEK-tree-oh-man-see",
+ "pos": "noun",
+ "definition": "Divination by watching a rooster peck at grain scattered over letters, reading the omen from which ones it takes.",
+ "etymology": "From the Greek alektryon, rooster, plus -mancy.",
+ "image": "rooster-on-crossed-trumpets",
+ "connection": "The picture shows a rooster, the very bird this ancient fortune-telling method relies on.",
+ "generated_at": "2026-11-24T12:24:22Z",
  "word_img": {
   "file": "word.jpg",
-  "w": 325,
+  "w": 328,
   "h": 52
  }
 }
