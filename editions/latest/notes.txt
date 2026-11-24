@@ -1,3 +1,4 @@
-Edition 2026-11-23 (compiled from pre-fetched feed data; url_verified true).
-- Idaho is thin: 2 articles. The Idaho feeds had only two usable non-repeat items inside the window; Idaho Capital Sun items were from Nov 20 or earlier and Boise State Public Radio returned none. Idaho Press and Idaho Statesman feeds failed.
-- Hims/Noom and AI drug development items are from Nov 20 STAT newsletters (urls are newsletter pages).
+Edition 2026-11-24 (compiled from pre-fetched feed data generated 2026-11-23T22:40Z; url_verified true).
+- Idaho is thin: 4 articles. Idaho Statesman feed timed out, Boise State Public Radio and Idaho Press returned none, and KTVB items had no text. Dropped an opinion commentary and a national piece from the Sun.
+- World has 4 articles: COP31 and other overlapping items were already used in the 2026-11-23 edition. The Huang story is placed in Tech and its market impact in Business.
+- BridgeBio item is from a STAT+ paywalled article, so it is short.

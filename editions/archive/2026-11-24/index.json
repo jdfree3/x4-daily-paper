@@ -1,0 +1,163 @@
+{
+ "paper": "The Godfrey Gazette",
+ "date": "2026-11-24",
+ "weekday": "Tuesday",
+ "generated_at": "2026-11-24T13:10:00Z",
+ "briefing": "Rep. Jimmy Gomez will resign from Congress after a House Ethics report, and Ukraine says it sank a Russian corvette in Libya. Trump held off an Iowa explosives detonation pending a court ruling. Nvidia reinstated Jensen Huang, adding nearly $1 trillion in value, and Anthropic launched Claude Ship. The FDA approved the first drug for limb-girdle dystrophy. In Idaho, state revenue is $82.5 million above forecast.",
+ "sections": [
+  {
+   "id": "world",
+   "name": "World and US",
+   "brief": "Rep. Gomez to resign; Ukraine says it sank a Russian ship in Libya.",
+   "articles": [
+    {
+     "id": "world-1",
+     "headline": "Rep. Gomez to resign after House Ethics report",
+     "source": "NPR",
+     "summary": "Gomez will resign Dec. 1 after a House Ethics report found substantial evidence of misconduct toward a staffer.",
+     "pages": 2
+    },
+    {
+     "id": "world-2",
+     "headline": "Ukraine says it sank Russian corvette in Libya",
+     "source": "NPR",
+     "summary": "Zelenskyy says sea drones sank the Russian corvette Merkury at a Libyan port, 2,400 km from the front.",
+     "pages": 2
+    },
+    {
+     "id": "world-3",
+     "headline": "Trump orders Iowa explosives detonation held for court",
+     "source": "BBC News",
+     "summary": "Trump says the Army will wait for the Eighth Circuit before detonating five tonnes of explosives in Iowa.",
+     "pages": 2
+    },
+    {
+     "id": "world-4",
+     "headline": "Oxfam: Gaza environment severely contaminated",
+     "source": "BBC News",
+     "summary": "Oxfam says over 99% of Gaza shows contamination from the war. Israel says the report falls short of standards.",
+     "pages": 2
+    }
+   ]
+  },
+  {
+   "id": "tech",
+   "name": "Tech and AI",
+   "brief": "Huang back at Nvidia; Anthropic launches Claude Ship.",
+   "articles": [
+    {
+     "id": "tech-1",
+     "headline": "Huang returns as Nvidia CEO after Trump lobbying",
+     "source": "The Verge",
+     "summary": "Nvidia reinstated Jensen Huang less than two weeks after he resigned. Trump says he pushed for it.",
+     "pages": 1
+    },
+    {
+     "id": "tech-2",
+     "headline": "Anthropic launches Claude Ship for code approvals",
+     "source": "TechCrunch",
+     "summary": "Claude Ship is a suite of AI agents that review, fix and can auto-approve routine code changes.",
+     "pages": 2
+    },
+    {
+     "id": "tech-3",
+     "headline": "Ladybird browser alpha opens for testing",
+     "source": "The Verge",
+     "summary": "The independent Ladybird browser, built on a from-scratch engine, is in alpha on macOS and Linux after four years of work.",
+     "pages": 1
+    },
+    {
+     "id": "tech-4",
+     "headline": "Virginia and Oregon sue SpaceX over Grok images",
+     "source": "Ars Technica",
+     "summary": "Virginia and Oregon are the first states to sue SpaceX, alleging Grok still generates sexualized images of real women and children.",
+     "pages": 2
+    },
+    {
+     "id": "tech-5",
+     "headline": "Megaspeed headed for US export blacklist",
+     "source": "TechCrunch",
+     "summary": "Semafor reports the Commerce Department will add Singapore-based Megaspeed to its Entity List, limiting its access to US chips.",
+     "pages": 1
+    }
+   ]
+  },
+  {
+   "id": "biz",
+   "name": "Business and Healthcare",
+   "brief": "Nvidia adds nearly $1tn; FDA approves first LGMD drug.",
+   "articles": [
+    {
+     "id": "biz-1",
+     "headline": "Nvidia value jumps nearly $1tn as tech rallies",
+     "source": "BBC News",
+     "summary": "Nvidia shares rose more than 31% after Huang returned. The Nasdaq gained 6.5% and the S&P 500 rose 4.75%.",
+     "pages": 1
+    },
+    {
+     "id": "biz-2",
+     "headline": "FDA approves first drug for limb-girdle dystrophy",
+     "source": "STAT News",
+     "summary": "The FDA approved BridgeBio's Welgemda for LGMD 2i/R9. The price works out to nearly $1 million a year.",
+     "pages": 1
+    },
+    {
+     "id": "biz-3",
+     "headline": "Smart knee implants raise costs, patient concerns",
+     "source": "KFF Health News",
+     "summary": "Sensor-equipped joint implants are adding to health costs, and some patients say they did not know they received one.",
+     "pages": 1
+    },
+    {
+     "id": "biz-4",
+     "headline": "Medicare for All returns as Democrats take Congress",
+     "source": "KFF Health News",
+     "summary": "New Democratic senators-elect campaigned on universal coverage, but past efforts split the party over how far to go.",
+     "pages": 1
+    },
+    {
+     "id": "biz-5",
+     "headline": "Preventive services panel meets, votes in private",
+     "source": "STAT News",
+     "summary": "The USPSTF met for the first time since March 2025. Members voted in private on cervical cancer, perinatal depression and alcohol use.",
+     "pages": 2
+    }
+   ]
+  },
+  {
+   "id": "idaho",
+   "name": "Idaho",
+   "brief": "State revenue runs $82.5M ahead; first CWD case in Unit 13.",
+   "articles": [
+    {
+     "id": "idaho-1",
+     "headline": "Idaho revenues run $82.5 million above forecast",
+     "source": "Idaho Capital Sun",
+     "summary": "State revenue is 4.8% ahead of forecast four months into fiscal 2027, with a projected $688.3 million ending balance.",
+     "pages": 1
+    },
+    {
+     "id": "idaho-2",
+     "headline": "First CWD case found in Idaho Unit 13",
+     "source": "Idaho Capital Sun",
+     "summary": "A hunter-killed mule deer near the Oregon border tested positive for chronic wasting disease, the first detection in Unit 13.",
+     "pages": 1
+    },
+    {
+     "id": "idaho-3",
+     "headline": "Geothermal leak narrows Main Street in Boise",
+     "source": "KIVI",
+     "summary": "Main Street is down to one lane between 11th and 12th Streets while crews repair a geothermal leak, possibly for several days.",
+     "pages": 1
+    },
+    {
+     "id": "idaho-4",
+     "headline": "Boise Bench shop makes plant-based soap by hand",
+     "source": "KIVI",
+     "summary": "Mathair Earth, run by a mother and her daughters, makes soap and skincare in Boise and now has a storefront on Overland Road.",
+     "pages": 1
+    }
+   ]
+  }
+ ]
+}
