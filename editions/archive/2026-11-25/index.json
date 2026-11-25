@@ -1,0 +1,170 @@
+{
+ "paper": "The Godfrey Gazette",
+ "date": "2026-11-25",
+ "weekday": "Wednesday",
+ "generated_at": "2026-11-25T13:10:00Z",
+ "briefing": "Huawei was convicted of conspiracy to steal trade secrets but cleared of racketeering, and the US is probing Iran ties to up to 50 hacked ships. Anthropic shares fell below their $83 IPO price, and Nvidia gave back part of its rally. Sanofi agreed to buy Insmed for $41 billion. In Idaho, a federal scorecard ranks the state first for foster homes per child.",
+ "sections": [
+  {
+   "id": "world",
+   "name": "World and US",
+   "brief": "Huawei, Iran ship hacks and a Congo plane lead.",
+   "articles": [
+    {
+     "id": "world-1",
+     "headline": "Huawei guilty of trade secrets plot, not racketeering",
+     "source": "BBC News",
+     "summary": "Huawei guilty of trade secret and bank fraud conspiracy; racketeering count rejected.",
+     "pages": 2
+    },
+    {
+     "id": "world-2",
+     "headline": "US probes Iran link to up to 50 hacked cargo ships",
+     "source": "NPR",
+     "summary": "Officials suspect Iran in cyberattacks on as many as 50 commercial vessels.",
+     "pages": 2
+    },
+    {
+     "id": "world-3",
+     "headline": "DR Congo hunts missing plane as rebels claim shootdown",
+     "source": "BBC News",
+     "summary": "Army lost contact with a Cessna on Sunday; rebels say they downed one.",
+     "pages": 2
+    },
+    {
+     "id": "world-4",
+     "headline": "Sarkozy and Carla Bruni ordered to stand trial",
+     "source": "BBC News",
+     "summary": "Case stems from retraction of a witness's Gaddafi funding testimony.",
+     "pages": 2
+    },
+    {
+     "id": "world-5",
+     "headline": "Israeli strike kills Hamas internal security chief",
+     "source": "BBC News",
+     "summary": "At least seven died in Gaza strikes, including Naeem Abu Nahel.",
+     "pages": 2
+    }
+   ]
+  },
+  {
+   "id": "tech",
+   "name": "Tech and AI",
+   "brief": "Anthropic shares dip below IPO price; UK warns of AI attacks.",
+   "articles": [
+    {
+     "id": "tech-1",
+     "headline": "Anthropic stock slips under $83 IPO price",
+     "source": "TechCrunch",
+     "summary": "Shares fell nearly 12% in a week after opening at $111.50.",
+     "pages": 2
+    },
+    {
+     "id": "tech-2",
+     "headline": "UK: AI hacking tools exposing years of weak security",
+     "source": "TechCrunch",
+     "summary": "NCSC sees a marked rise in autonomous hacking incidents since September.",
+     "pages": 2
+    },
+    {
+     "id": "tech-3",
+     "headline": "FAA probes Amazon drone that crashed onto a garage",
+     "source": "Ars Technica",
+     "summary": "Drone clipped a fiber line after delivering shampoo in Michigan.",
+     "pages": 2
+    },
+    {
+     "id": "tech-4",
+     "headline": "Threads arrives on iPad with stock cashtags",
+     "source": "TechCrunch",
+     "summary": "Update also borrows X's dollar-sign ticker tags.",
+     "pages": 1
+    },
+    {
+     "id": "tech-5",
+     "headline": "Lawmakers eye defense bill to extend FISA Section 702",
+     "source": "The Verge",
+     "summary": "Backers want to beat the incoming Democratic majority.",
+     "pages": 2
+    }
+   ]
+  },
+  {
+   "id": "biz",
+   "name": "Business and Healthcare",
+   "brief": "Sanofi's $41B Insmed deal; AI boom fears persist.",
+   "articles": [
+    {
+     "id": "biz-1",
+     "headline": "Sanofi to buy Insmed in $41B biopharma deal",
+     "source": "STAT News",
+     "summary": "Largest biopharma acquisition in years adds two lung drugs.",
+     "pages": 1
+    },
+    {
+     "id": "biz-2",
+     "headline": "Roche touts breast cancer pill after two FDA nods",
+     "source": "STAT News",
+     "summary": "Wilserdly won two US approvals in a week; peak sales est. $9B.",
+     "pages": 1
+    },
+    {
+     "id": "biz-3",
+     "headline": "Medicaid work rules add barriers after disasters",
+     "source": "KFF Health News",
+     "summary": "Hawaii shows how new requirements may affect storm-hit workers.",
+     "pages": 2
+    },
+    {
+     "id": "biz-4",
+     "headline": "Fears over AI boom linger as Nvidia bounce fades",
+     "source": "BBC News",
+     "summary": "Nvidia slid at the bell; Anthropic trades below its listing.",
+     "pages": 1
+    },
+    {
+     "id": "biz-5",
+     "headline": "Rising costs push apple growers to tear out orchards",
+     "source": "NPR",
+     "summary": "Tariffs, fuel and fertilizer squeeze the top US apple region.",
+     "pages": 1
+    }
+   ]
+  },
+  {
+   "id": "idaho",
+   "name": "Idaho",
+   "brief": "Idaho leads foster ratio; Nampa weighs water rate hike.",
+   "articles": [
+    {
+     "id": "idaho-1",
+     "headline": "Idaho ranks first for foster homes per child",
+     "source": "Idaho Capital Sun",
+     "summary": "Federal official visits Boise, announces state competition.",
+     "pages": 1
+    },
+    {
+     "id": "idaho-2",
+     "headline": "Nampa council to hear water rate increase proposal",
+     "source": "KIVI",
+     "summary": "Average bill would rise $1.48 a month; hearing Dec. 21.",
+     "pages": 1
+    },
+    {
+     "id": "idaho-3",
+     "headline": "From Kabul to Boise: Afghan women resume studies",
+     "source": "Boise State Public Radio",
+     "summary": "More than 1,000 evacuees have resettled in Idaho since 2021.",
+     "pages": 1
+    },
+    {
+     "id": "idaho-4",
+     "headline": "Meridian Speedway swaps historic grandstand",
+     "source": "KIVI",
+     "summary": "New aluminum seating replaces wooden bleachers before spring.",
+     "pages": 1
+    }
+   ]
+  }
+ ]
+}
