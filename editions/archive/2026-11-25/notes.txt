@@ -1,4 +1,3 @@
-Edition 2026-11-24 (compiled from pre-fetched feed data generated 2026-11-23T22:40Z; url_verified true).
-- Idaho is thin: 4 articles. Idaho Statesman feed timed out, Boise State Public Radio and Idaho Press returned none, and KTVB items had no text. Dropped an opinion commentary and a national piece from the Sun.
-- World has 4 articles: COP31 and other overlapping items were already used in the 2026-11-23 edition. The Huang story is placed in Tech and its market impact in Business.
-- BridgeBio item is from a STAT+ paywalled article, so it is short.
+Edition 2026-11-25 (from feed data generated 2026-11-24T21:13Z; url_verified true).
+- Idaho is thin: 4 articles. Idaho Press and Idaho Statesman feeds failed; the rest of the feed items were opinion or non-Idaho.
+- Huang/Megaspeed/Gomez stories skipped as already covered in the 2026-11-24 edition.
