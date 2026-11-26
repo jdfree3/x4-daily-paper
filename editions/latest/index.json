@@ -1,48 +1,48 @@
 {
  "paper": "The Godfrey Gazette",
- "date": "2026-11-25",
- "weekday": "Wednesday",
- "generated_at": "2026-11-25T13:10:00Z",
- "briefing": "Huawei was convicted of conspiracy to steal trade secrets but cleared of racketeering, and the US is probing Iran ties to up to 50 hacked ships. Anthropic shares fell below their $83 IPO price, and Nvidia gave back part of its rally. Sanofi agreed to buy Insmed for $41 billion. In Idaho, a federal scorecard ranks the state first for foster homes per child.",
+ "date": "2026-11-26",
+ "weekday": "Thursday",
+ "generated_at": "2026-11-26T12:55:00Z",
+ "briefing": "The Army destroyed nearly five tonnes of explosives in Iowa, calling it a success. Israeli judges urged prosecutors to reconsider Netanyahu's bribery case, and the US announced new tariffs on China, the EU and 12 others. In tech, the FCC cleared SpaceX to launch up to 1 million satellites. US stocks fell again on AI worries, with Nvidia down 8%. In Idaho, a March trial was set in a fatal Nampa crash.",
  "sections": [
   {
    "id": "world",
    "name": "World and US",
-   "brief": "Huawei, Iran ship hacks and a Congo plane lead.",
+   "brief": "Army detonates Iowa explosives; Netanyahu case doubts; new US tariffs.",
    "articles": [
     {
      "id": "world-1",
-     "headline": "Huawei guilty of trade secrets plot, not racketeering",
+     "headline": "Army detonates Iowa explosives, calls it a success",
      "source": "BBC News",
-     "summary": "Huawei guilty of trade secret and bank fraud conspiracy; racketeering count rejected.",
+     "summary": "Nearly five tonnes of lead azide were destroyed near Middletown; early EPA readings showed no lead.",
      "pages": 2
     },
     {
      "id": "world-2",
-     "headline": "US probes Iran link to up to 50 hacked cargo ships",
-     "source": "NPR",
-     "summary": "Officials suspect Iran in cyberattacks on as many as 50 commercial vessels.",
+     "headline": "Judges urge Israel to drop Netanyahu bribery case",
+     "source": "BBC News",
+     "summary": "Judges said conviction chances are low in Case 4000 and suggested a plea deal in a third case.",
      "pages": 2
     },
     {
      "id": "world-3",
-     "headline": "DR Congo hunts missing plane as rebels claim shootdown",
+     "headline": "Abrego Garcia leaves US for Spain, ending deportation fight",
      "source": "BBC News",
-     "summary": "Army lost contact with a Cessna on Sunday; rebels say they downed one.",
+     "summary": "The Salvadoran man whose wrongful deportation became a flashpoint took a commercial flight on Tuesday.",
      "pages": 2
     },
     {
      "id": "world-4",
-     "headline": "Sarkozy and Carla Bruni ordered to stand trial",
+     "headline": "US unveils new tariffs on China, EU and 12 others",
      "source": "BBC News",
-     "summary": "Case stems from retraction of a witness's Gaddafi funding testimony.",
+     "summary": "Rates reach up to 40% for China, but the duties are not expected to take effect until next year.",
      "pages": 2
     },
     {
      "id": "world-5",
-     "headline": "Israeli strike kills Hamas internal security chief",
+     "headline": "Colombian forces free 76 hostages in Cartagena supermarket",
      "source": "BBC News",
-     "summary": "At least seven died in Gaza strikes, including Naeem Abu Nahel.",
+     "summary": "Special forces ended a 17-hour standoff, killing one gunman and arresting four.",
      "pages": 2
     }
    ]
@@ -50,41 +50,41 @@
   {
    "id": "tech",
    "name": "Tech and AI",
-   "brief": "Anthropic shares dip below IPO price; UK warns of AI attacks.",
+   "brief": "OpenAI merges Chat and Work limits; FCC OKs 1 million SpaceX satellites.",
    "articles": [
     {
      "id": "tech-1",
-     "headline": "Anthropic stock slips under $83 IPO price",
+     "headline": "OpenAI merges ChatGPT Chat and Work, shares one limit",
      "source": "TechCrunch",
-     "summary": "Shares fell nearly 12% in a week after opening at $111.50.",
+     "summary": "Heaviest users may hit caps sooner; Instant model chats stay unlimited.",
      "pages": 2
     },
     {
      "id": "tech-2",
-     "headline": "UK: AI hacking tools exposing years of weak security",
-     "source": "TechCrunch",
-     "summary": "NCSC sees a marked rise in autonomous hacking incidents since September.",
+     "headline": "FCC clears SpaceX to launch up to 1 million satellites",
+     "source": "Ars Technica",
+     "summary": "The conditional approval covers Starmind orbital data centers, a roughly 50-fold jump in satellites.",
      "pages": 2
     },
     {
      "id": "tech-3",
-     "headline": "FAA probes Amazon drone that crashed onto a garage",
-     "source": "Ars Technica",
-     "summary": "Drone clipped a fiber line after delivering shampoo in Michigan.",
+     "headline": "1Password says hacker stole customer names and emails",
+     "source": "The Verge",
+     "summary": "Vault contents and passwords were not exposed, but phishing risk rises.",
      "pages": 2
     },
     {
      "id": "tech-4",
-     "headline": "Threads arrives on iPad with stock cashtags",
+     "headline": "Amodei calls claims of ceding control to AI 'absurd'",
      "source": "TechCrunch",
-     "summary": "Update also borrows X's dollar-sign ticker tags.",
-     "pages": 1
+     "summary": "Anthropic's CEO answered rivals who suggest his firm backs surrendering human agency.",
+     "pages": 2
     },
     {
      "id": "tech-5",
-     "headline": "Lawmakers eye defense bill to extend FISA Section 702",
-     "source": "The Verge",
-     "summary": "Backers want to beat the incoming Democratic majority.",
+     "headline": "Backblaze to share some customer data with advertisers",
+     "source": "Ars Technica",
+     "summary": "A privacy policy taking effect Dec. 1 lists data shared with ad partners since 2025.",
      "pages": 2
     }
    ]
@@ -92,41 +92,41 @@
   {
    "id": "biz",
    "name": "Business and Healthcare",
-   "brief": "Sanofi's $41B Insmed deal; AI boom fears persist.",
+   "brief": "Stocks fall on AI worries; Poundland collapses; single-payer costs debated.",
    "articles": [
     {
      "id": "biz-1",
-     "headline": "Sanofi to buy Insmed in $41B biopharma deal",
-     "source": "STAT News",
-     "summary": "Largest biopharma acquisition in years adds two lung drugs.",
-     "pages": 1
+     "headline": "US stocks fall again on AI worries; Nvidia down 8%",
+     "source": "BBC News",
+     "summary": "The Nasdaq shed more than 2% as doubts over AI spending weighed on big tech.",
+     "pages": 2
     },
     {
      "id": "biz-2",
-     "headline": "Roche touts breast cancer pill after two FDA nods",
-     "source": "STAT News",
-     "summary": "Wilserdly won two US approvals in a week; peak sales est. $9B.",
-     "pages": 1
+     "headline": "Poundland collapses into administration, 11,000 jobs at risk",
+     "source": "BBC News",
+     "summary": "The UK discount chain will keep trading while it is likely broken up.",
+     "pages": 2
     },
     {
      "id": "biz-3",
-     "headline": "Medicaid work rules add barriers after disasters",
+     "headline": "Single-payer push faces sticker shock over costs",
      "source": "KFF Health News",
-     "summary": "Hawaii shows how new requirements may affect storm-hit workers.",
+     "summary": "An Oregon panel put its plan at $69.7B a year; a White House estimate for Medicare for All is $4.7T.",
      "pages": 2
     },
     {
      "id": "biz-4",
-     "headline": "Fears over AI boom linger as Nvidia bounce fades",
-     "source": "BBC News",
-     "summary": "Nvidia slid at the bell; Anthropic trades below its listing.",
-     "pages": 1
+     "headline": "Nebraska Medicaid work rules: paperwork drives coverage loss",
+     "source": "KFF Health News",
+     "summary": "Nebraska's early rollout may preview problems for more than three dozen states in 2027.",
+     "pages": 2
     },
     {
      "id": "biz-5",
-     "headline": "Rising costs push apple growers to tear out orchards",
+     "headline": "Green Wednesday: cannabis discounts squeeze retailers",
      "source": "NPR",
-     "summary": "Tariffs, fuel and fertilizer squeeze the top US apple region.",
+     "summary": "The day before Thanksgiving now rivals 4/20 as a top sales day, but deep discounts hurt revenue.",
      "pages": 1
     }
    ]
@@ -134,35 +134,21 @@
   {
    "id": "idaho",
    "name": "Idaho",
-   "brief": "Idaho leads foster ratio; Nampa weighs water rate hike.",
+   "brief": "Nampa crash trial set for March; Idaho midterm turnout finalized.",
    "articles": [
     {
      "id": "idaho-1",
-     "headline": "Idaho ranks first for foster homes per child",
-     "source": "Idaho Capital Sun",
-     "summary": "Federal official visits Boise, announces state competition.",
+     "headline": "Trial set for March in fatal Nampa DUI crash",
+     "source": "KIVI-TV",
+     "summary": "Abigail Wolverton faces vehicular manslaughter charges in the deaths of a mother and her newborn.",
      "pages": 1
     },
     {
      "id": "idaho-2",
-     "headline": "Nampa council to hear water rate increase proposal",
-     "source": "KIVI",
-     "summary": "Average bill would rise $1.48 a month; hearing Dec. 21.",
-     "pages": 1
-    },
-    {
-     "id": "idaho-3",
-     "headline": "From Kabul to Boise: Afghan women resume studies",
-     "source": "Boise State Public Radio",
-     "summary": "More than 1,000 evacuees have resettled in Idaho since 2021.",
-     "pages": 1
-    },
-    {
-     "id": "idaho-4",
-     "headline": "Meridian Speedway swaps historic grandstand",
-     "source": "KIVI",
-     "summary": "New aluminum seating replaces wooden bleachers before spring.",
-     "pages": 1
+     "headline": "Two-thirds of Idaho voters cast 2026 ballots",
+     "source": "Idaho Capital Sun",
+     "summary": "About 734,000 voted, the state's largest midterm turnout by count; results were certified.",
+     "pages": 2
     }
    ]
   }

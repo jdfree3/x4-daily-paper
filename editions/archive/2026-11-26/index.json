@@ -1,0 +1,156 @@
+{
+ "paper": "The Godfrey Gazette",
+ "date": "2026-11-26",
+ "weekday": "Thursday",
+ "generated_at": "2026-11-26T12:55:00Z",
+ "briefing": "The Army destroyed nearly five tonnes of explosives in Iowa, calling it a success. Israeli judges urged prosecutors to reconsider Netanyahu's bribery case, and the US announced new tariffs on China, the EU and 12 others. In tech, the FCC cleared SpaceX to launch up to 1 million satellites. US stocks fell again on AI worries, with Nvidia down 8%. In Idaho, a March trial was set in a fatal Nampa crash.",
+ "sections": [
+  {
+   "id": "world",
+   "name": "World and US",
+   "brief": "Army detonates Iowa explosives; Netanyahu case doubts; new US tariffs.",
+   "articles": [
+    {
+     "id": "world-1",
+     "headline": "Army detonates Iowa explosives, calls it a success",
+     "source": "BBC News",
+     "summary": "Nearly five tonnes of lead azide were destroyed near Middletown; early EPA readings showed no lead.",
+     "pages": 2
+    },
+    {
+     "id": "world-2",
+     "headline": "Judges urge Israel to drop Netanyahu bribery case",
+     "source": "BBC News",
+     "summary": "Judges said conviction chances are low in Case 4000 and suggested a plea deal in a third case.",
+     "pages": 2
+    },
+    {
+     "id": "world-3",
+     "headline": "Abrego Garcia leaves US for Spain, ending deportation fight",
+     "source": "BBC News",
+     "summary": "The Salvadoran man whose wrongful deportation became a flashpoint took a commercial flight on Tuesday.",
+     "pages": 2
+    },
+    {
+     "id": "world-4",
+     "headline": "US unveils new tariffs on China, EU and 12 others",
+     "source": "BBC News",
+     "summary": "Rates reach up to 40% for China, but the duties are not expected to take effect until next year.",
+     "pages": 2
+    },
+    {
+     "id": "world-5",
+     "headline": "Colombian forces free 76 hostages in Cartagena supermarket",
+     "source": "BBC News",
+     "summary": "Special forces ended a 17-hour standoff, killing one gunman and arresting four.",
+     "pages": 2
+    }
+   ]
+  },
+  {
+   "id": "tech",
+   "name": "Tech and AI",
+   "brief": "OpenAI merges Chat and Work limits; FCC OKs 1 million SpaceX satellites.",
+   "articles": [
+    {
+     "id": "tech-1",
+     "headline": "OpenAI merges ChatGPT Chat and Work, shares one limit",
+     "source": "TechCrunch",
+     "summary": "Heaviest users may hit caps sooner; Instant model chats stay unlimited.",
+     "pages": 2
+    },
+    {
+     "id": "tech-2",
+     "headline": "FCC clears SpaceX to launch up to 1 million satellites",
+     "source": "Ars Technica",
+     "summary": "The conditional approval covers Starmind orbital data centers, a roughly 50-fold jump in satellites.",
+     "pages": 2
+    },
+    {
+     "id": "tech-3",
+     "headline": "1Password says hacker stole customer names and emails",
+     "source": "The Verge",
+     "summary": "Vault contents and passwords were not exposed, but phishing risk rises.",
+     "pages": 2
+    },
+    {
+     "id": "tech-4",
+     "headline": "Amodei calls claims of ceding control to AI 'absurd'",
+     "source": "TechCrunch",
+     "summary": "Anthropic's CEO answered rivals who suggest his firm backs surrendering human agency.",
+     "pages": 2
+    },
+    {
+     "id": "tech-5",
+     "headline": "Backblaze to share some customer data with advertisers",
+     "source": "Ars Technica",
+     "summary": "A privacy policy taking effect Dec. 1 lists data shared with ad partners since 2025.",
+     "pages": 2
+    }
+   ]
+  },
+  {
+   "id": "biz",
+   "name": "Business and Healthcare",
+   "brief": "Stocks fall on AI worries; Poundland collapses; single-payer costs debated.",
+   "articles": [
+    {
+     "id": "biz-1",
+     "headline": "US stocks fall again on AI worries; Nvidia down 8%",
+     "source": "BBC News",
+     "summary": "The Nasdaq shed more than 2% as doubts over AI spending weighed on big tech.",
+     "pages": 2
+    },
+    {
+     "id": "biz-2",
+     "headline": "Poundland collapses into administration, 11,000 jobs at risk",
+     "source": "BBC News",
+     "summary": "The UK discount chain will keep trading while it is likely broken up.",
+     "pages": 2
+    },
+    {
+     "id": "biz-3",
+     "headline": "Single-payer push faces sticker shock over costs",
+     "source": "KFF Health News",
+     "summary": "An Oregon panel put its plan at $69.7B a year; a White House estimate for Medicare for All is $4.7T.",
+     "pages": 2
+    },
+    {
+     "id": "biz-4",
+     "headline": "Nebraska Medicaid work rules: paperwork drives coverage loss",
+     "source": "KFF Health News",
+     "summary": "Nebraska's early rollout may preview problems for more than three dozen states in 2027.",
+     "pages": 2
+    },
+    {
+     "id": "biz-5",
+     "headline": "Green Wednesday: cannabis discounts squeeze retailers",
+     "source": "NPR",
+     "summary": "The day before Thanksgiving now rivals 4/20 as a top sales day, but deep discounts hurt revenue.",
+     "pages": 1
+    }
+   ]
+  },
+  {
+   "id": "idaho",
+   "name": "Idaho",
+   "brief": "Nampa crash trial set for March; Idaho midterm turnout finalized.",
+   "articles": [
+    {
+     "id": "idaho-1",
+     "headline": "Trial set for March in fatal Nampa DUI crash",
+     "source": "KIVI-TV",
+     "summary": "Abigail Wolverton faces vehicular manslaughter charges in the deaths of a mother and her newborn.",
+     "pages": 1
+    },
+    {
+     "id": "idaho-2",
+     "headline": "Two-thirds of Idaho voters cast 2026 ballots",
+     "source": "Idaho Capital Sun",
+     "summary": "About 734,000 voted, the state's largest midterm turnout by count; results were certified.",
+     "pages": 2
+    }
+   ]
+  }
+ ]
+}
