@@ -1,48 +1,48 @@
 {
  "paper": "The Godfrey Gazette",
- "date": "2026-11-26",
- "weekday": "Thursday",
- "generated_at": "2026-11-26T12:55:00Z",
- "briefing": "The Army destroyed nearly five tonnes of explosives in Iowa, calling it a success. Israeli judges urged prosecutors to reconsider Netanyahu's bribery case, and the US announced new tariffs on China, the EU and 12 others. In tech, the FCC cleared SpaceX to launch up to 1 million satellites. US stocks fell again on AI worries, with Nvidia down 8%. In Idaho, a March trial was set in a fatal Nampa crash.",
+ "date": "2026-11-27",
+ "weekday": "Friday",
+ "generated_at": "2026-11-27T12:55:00Z",
+ "briefing": "An Iran-blamed drone strike in Kuwait killed two Italian technicians, and Congo's Ebola outbreak passed 12,000 confirmed cases. Nvidia paused server shipments to four Southeast Asian countries over export rules, and X added parental controls for teens. A federal judge ruled the FCC's pressure on ABC licenses violated free speech, and Norse Atlantic suspended all flights. In Idaho, over 60,000 seniors face canceled Medicare Advantage plans.",
  "sections": [
   {
    "id": "world",
    "name": "World and US",
-   "brief": "Army detonates Iowa explosives; Netanyahu case doubts; new US tariffs.",
+   "brief": "Iran-blamed drone strike kills two Italians in Kuwait; Congo Ebola tops 12,000 cases.",
    "articles": [
     {
      "id": "world-1",
-     "headline": "Army detonates Iowa explosives, calls it a success",
-     "source": "BBC News",
-     "summary": "Nearly five tonnes of lead azide were destroyed near Middletown; early EPA readings showed no lead.",
+     "headline": "Two Italians killed in drone strike in Kuwait",
+     "source": "BBC",
+     "summary": "Technicians for Rheinmetall died; Iran denies responsibility.",
      "pages": 2
     },
     {
      "id": "world-2",
-     "headline": "Judges urge Israel to drop Netanyahu bribery case",
-     "source": "BBC News",
-     "summary": "Judges said conviction chances are low in Case 4000 and suggested a plea deal in a third case.",
+     "headline": "Congo Ebola outbreak passes 12,000 confirmed cases",
+     "source": "NPR",
+     "summary": "Fighting hampers response to the fastest-growing Ebola outbreak on record.",
      "pages": 2
     },
     {
      "id": "world-3",
-     "headline": "Abrego Garcia leaves US for Spain, ending deportation fight",
-     "source": "BBC News",
-     "summary": "The Salvadoran man whose wrongful deportation became a flashpoint took a commercial flight on Tuesday.",
+     "headline": "Kim vows more nuclear weapons after ignoring Trump offer",
+     "source": "NPR",
+     "summary": "He toured uranium plants, days after skipping a meeting Trump proposed.",
      "pages": 2
     },
     {
      "id": "world-4",
-     "headline": "US unveils new tariffs on China, EU and 12 others",
-     "source": "BBC News",
-     "summary": "Rates reach up to 40% for China, but the duties are not expected to take effect until next year.",
+     "headline": "UK and EU publish Brexit reset treaty texts",
+     "source": "BBC",
+     "summary": "The food deal has a 10-year termination clause with costs for exit.",
      "pages": 2
     },
     {
      "id": "world-5",
-     "headline": "Colombian forces free 76 hostages in Cartagena supermarket",
-     "source": "BBC News",
-     "summary": "Special forces ended a 17-hour standoff, killing one gunman and arresting four.",
+     "headline": "Bangkok refinery blast injures nine, three critically",
+     "source": "BBC",
+     "summary": "Fire at Bangchak plant was put out in 30 minutes; production halted.",
      "pages": 2
     }
    ]
@@ -50,41 +50,34 @@
   {
    "id": "tech",
    "name": "Tech and AI",
-   "brief": "OpenAI merges Chat and Work limits; FCC OKs 1 million SpaceX satellites.",
+   "brief": "Nvidia pauses server shipments to Southeast Asia; X adds teen parental controls.",
    "articles": [
     {
      "id": "tech-1",
-     "headline": "OpenAI merges ChatGPT Chat and Work, shares one limit",
+     "headline": "Nvidia pauses server shipments to Southeast Asia",
      "source": "TechCrunch",
-     "summary": "Heaviest users may hit caps sooner; Instant model chats stay unlimited.",
+     "summary": "It is checking whether partners meet US export rules, WSJ reports.",
      "pages": 2
     },
     {
      "id": "tech-2",
-     "headline": "FCC clears SpaceX to launch up to 1 million satellites",
-     "source": "Ars Technica",
-     "summary": "The conditional approval covers Starmind orbital data centers, a roughly 50-fold jump in satellites.",
+     "headline": "X adds parental controls for teen accounts",
+     "source": "TechCrunch",
+     "summary": "Teens keep some say; parents cannot read DMs or search history.",
      "pages": 2
     },
     {
      "id": "tech-3",
-     "headline": "1Password says hacker stole customer names and emails",
+     "headline": "Google to publish Android developers addresses",
      "source": "The Verge",
-     "summary": "Vault contents and passwords were not exposed, but phishing risk rises.",
+     "summary": "Rule meant for EU law will expose contact details worldwide.",
      "pages": 2
     },
     {
      "id": "tech-4",
-     "headline": "Amodei calls claims of ceding control to AI 'absurd'",
-     "source": "TechCrunch",
-     "summary": "Anthropic's CEO answered rivals who suggest his firm backs surrendering human agency.",
-     "pages": 2
-    },
-    {
-     "id": "tech-5",
-     "headline": "Backblaze to share some customer data with advertisers",
+     "headline": "Hera probe images crater left by NASA DART impact",
      "source": "Ars Technica",
-     "summary": "A privacy policy taking effect Dec. 1 lists data shared with ad partners since 2025.",
+     "summary": "ESA craft shows a stadium-sized scar on asteroid Dimorphos.",
      "pages": 2
     }
    ]
@@ -92,63 +85,70 @@
   {
    "id": "biz",
    "name": "Business and Healthcare",
-   "brief": "Stocks fall on AI worries; Poundland collapses; single-payer costs debated.",
+   "brief": "Judge blocks FCC pressure on ABC licenses; Norse Atlantic grounds all flights.",
    "articles": [
     {
      "id": "biz-1",
-     "headline": "US stocks fall again on AI worries; Nvidia down 8%",
-     "source": "BBC News",
-     "summary": "The Nasdaq shed more than 2% as doubts over AI spending weighed on big tech.",
+     "headline": "Judge: FCC pressure on ABC licenses violated free speech",
+     "source": "NPR",
+     "summary": "Injunction blocks early license reviews of ABC stations.",
      "pages": 2
     },
     {
      "id": "biz-2",
-     "headline": "Poundland collapses into administration, 11,000 jobs at risk",
-     "source": "BBC News",
-     "summary": "The UK discount chain will keep trading while it is likely broken up.",
+     "headline": "Norse Atlantic suspends all flights, may file for bankruptcy",
+     "source": "BBC",
+     "summary": "The low-cost long-haul carrier cites a critical financial situation.",
      "pages": 2
     },
     {
      "id": "biz-3",
-     "headline": "Single-payer push faces sticker shock over costs",
-     "source": "KFF Health News",
-     "summary": "An Oregon panel put its plan at $69.7B a year; a White House estimate for Medicare for All is $4.7T.",
+     "headline": "Medicare same-day pay cut worries specialists",
+     "source": "STAT News",
+     "summary": "A 20% cut for same-day services hits podiatry and dermatology.",
      "pages": 2
     },
     {
      "id": "biz-4",
-     "headline": "Nebraska Medicaid work rules: paperwork drives coverage loss",
-     "source": "KFF Health News",
-     "summary": "Nebraska's early rollout may preview problems for more than three dozen states in 2027.",
+     "headline": "Credit card perks drive airline profits as fuel costs rise",
+     "source": "NPR",
+     "summary": "Loyalty cards are a bright spot, with Delta citing $9 billion from Amex.",
      "pages": 2
     },
     {
      "id": "biz-5",
-     "headline": "Green Wednesday: cannabis discounts squeeze retailers",
-     "source": "NPR",
-     "summary": "The day before Thanksgiving now rivals 4/20 as a top sales day, but deep discounts hurt revenue.",
-     "pages": 1
+     "headline": "Bank of England: mortgage payments to jump for millions",
+     "source": "BBC",
+     "summary": "6.5 million owners face an average 100 pound monthly rise by 2029.",
+     "pages": 2
     }
    ]
   },
   {
    "id": "idaho",
    "name": "Idaho",
-   "brief": "Nampa crash trial set for March; Idaho midterm turnout finalized.",
+   "brief": "Over 60,000 Idahoans lose Medicare Advantage plans; Dean Cameron to lead Health and Welfare.",
    "articles": [
     {
      "id": "idaho-1",
-     "headline": "Trial set for March in fatal Nampa DUI crash",
-     "source": "KIVI-TV",
-     "summary": "Abigail Wolverton faces vehicular manslaughter charges in the deaths of a mother and her newborn.",
-     "pages": 1
+     "headline": "Idaho seniors lose Medicare Advantage plans",
+     "source": "Idaho Capital Sun",
+     "summary": "Over 60,000 Idahoans face canceled plans; enrollment ends Dec. 7.",
+     "pages": 2
     },
     {
      "id": "idaho-2",
-     "headline": "Two-thirds of Idaho voters cast 2026 ballots",
+     "headline": "Dean Cameron to lead Idaho Health and Welfare for now",
      "source": "Idaho Capital Sun",
-     "summary": "About 734,000 voted, the state's largest midterm turnout by count; results were certified.",
+     "summary": "Gov. Little names interim heads; permanent pick after 2027 session.",
      "pages": 2
+    },
+    {
+     "id": "idaho-3",
+     "headline": "Ballet Idaho brings Nutcracker to Caldwell",
+     "source": "KIVI",
+     "summary": "Caldwell Fine Arts hosts the show for a fourth year.",
+     "pages": 1
     }
    ]
   }

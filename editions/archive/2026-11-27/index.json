@@ -1,0 +1,156 @@
+{
+ "paper": "The Godfrey Gazette",
+ "date": "2026-11-27",
+ "weekday": "Friday",
+ "generated_at": "2026-11-27T12:55:00Z",
+ "briefing": "An Iran-blamed drone strike in Kuwait killed two Italian technicians, and Congo's Ebola outbreak passed 12,000 confirmed cases. Nvidia paused server shipments to four Southeast Asian countries over export rules, and X added parental controls for teens. A federal judge ruled the FCC's pressure on ABC licenses violated free speech, and Norse Atlantic suspended all flights. In Idaho, over 60,000 seniors face canceled Medicare Advantage plans.",
+ "sections": [
+  {
+   "id": "world",
+   "name": "World and US",
+   "brief": "Iran-blamed drone strike kills two Italians in Kuwait; Congo Ebola tops 12,000 cases.",
+   "articles": [
+    {
+     "id": "world-1",
+     "headline": "Two Italians killed in drone strike in Kuwait",
+     "source": "BBC",
+     "summary": "Technicians for Rheinmetall died; Iran denies responsibility.",
+     "pages": 2
+    },
+    {
+     "id": "world-2",
+     "headline": "Congo Ebola outbreak passes 12,000 confirmed cases",
+     "source": "NPR",
+     "summary": "Fighting hampers response to the fastest-growing Ebola outbreak on record.",
+     "pages": 2
+    },
+    {
+     "id": "world-3",
+     "headline": "Kim vows more nuclear weapons after ignoring Trump offer",
+     "source": "NPR",
+     "summary": "He toured uranium plants, days after skipping a meeting Trump proposed.",
+     "pages": 2
+    },
+    {
+     "id": "world-4",
+     "headline": "UK and EU publish Brexit reset treaty texts",
+     "source": "BBC",
+     "summary": "The food deal has a 10-year termination clause with costs for exit.",
+     "pages": 2
+    },
+    {
+     "id": "world-5",
+     "headline": "Bangkok refinery blast injures nine, three critically",
+     "source": "BBC",
+     "summary": "Fire at Bangchak plant was put out in 30 minutes; production halted.",
+     "pages": 2
+    }
+   ]
+  },
+  {
+   "id": "tech",
+   "name": "Tech and AI",
+   "brief": "Nvidia pauses server shipments to Southeast Asia; X adds teen parental controls.",
+   "articles": [
+    {
+     "id": "tech-1",
+     "headline": "Nvidia pauses server shipments to Southeast Asia",
+     "source": "TechCrunch",
+     "summary": "It is checking whether partners meet US export rules, WSJ reports.",
+     "pages": 2
+    },
+    {
+     "id": "tech-2",
+     "headline": "X adds parental controls for teen accounts",
+     "source": "TechCrunch",
+     "summary": "Teens keep some say; parents cannot read DMs or search history.",
+     "pages": 2
+    },
+    {
+     "id": "tech-3",
+     "headline": "Google to publish Android developers addresses",
+     "source": "The Verge",
+     "summary": "Rule meant for EU law will expose contact details worldwide.",
+     "pages": 2
+    },
+    {
+     "id": "tech-4",
+     "headline": "Hera probe images crater left by NASA DART impact",
+     "source": "Ars Technica",
+     "summary": "ESA craft shows a stadium-sized scar on asteroid Dimorphos.",
+     "pages": 2
+    }
+   ]
+  },
+  {
+   "id": "biz",
+   "name": "Business and Healthcare",
+   "brief": "Judge blocks FCC pressure on ABC licenses; Norse Atlantic grounds all flights.",
+   "articles": [
+    {
+     "id": "biz-1",
+     "headline": "Judge: FCC pressure on ABC licenses violated free speech",
+     "source": "NPR",
+     "summary": "Injunction blocks early license reviews of ABC stations.",
+     "pages": 2
+    },
+    {
+     "id": "biz-2",
+     "headline": "Norse Atlantic suspends all flights, may file for bankruptcy",
+     "source": "BBC",
+     "summary": "The low-cost long-haul carrier cites a critical financial situation.",
+     "pages": 2
+    },
+    {
+     "id": "biz-3",
+     "headline": "Medicare same-day pay cut worries specialists",
+     "source": "STAT News",
+     "summary": "A 20% cut for same-day services hits podiatry and dermatology.",
+     "pages": 2
+    },
+    {
+     "id": "biz-4",
+     "headline": "Credit card perks drive airline profits as fuel costs rise",
+     "source": "NPR",
+     "summary": "Loyalty cards are a bright spot, with Delta citing $9 billion from Amex.",
+     "pages": 2
+    },
+    {
+     "id": "biz-5",
+     "headline": "Bank of England: mortgage payments to jump for millions",
+     "source": "BBC",
+     "summary": "6.5 million owners face an average 100 pound monthly rise by 2029.",
+     "pages": 2
+    }
+   ]
+  },
+  {
+   "id": "idaho",
+   "name": "Idaho",
+   "brief": "Over 60,000 Idahoans lose Medicare Advantage plans; Dean Cameron to lead Health and Welfare.",
+   "articles": [
+    {
+     "id": "idaho-1",
+     "headline": "Idaho seniors lose Medicare Advantage plans",
+     "source": "Idaho Capital Sun",
+     "summary": "Over 60,000 Idahoans face canceled plans; enrollment ends Dec. 7.",
+     "pages": 2
+    },
+    {
+     "id": "idaho-2",
+     "headline": "Dean Cameron to lead Idaho Health and Welfare for now",
+     "source": "Idaho Capital Sun",
+     "summary": "Gov. Little names interim heads; permanent pick after 2027 session.",
+     "pages": 2
+    },
+    {
+     "id": "idaho-3",
+     "headline": "Ballet Idaho brings Nutcracker to Caldwell",
+     "source": "KIVI",
+     "summary": "Caldwell Fine Arts hosts the show for a fourth year.",
+     "pages": 1
+    }
+   ]
+  }
+ ]
+}

@@ -1,3 +1,3 @@
-Edition 2026-11-26 (from feed data generated 2026-11-25T20:29Z; url_verified true).
-- Idaho is thin: 2 articles. Idaho Press and Idaho Statesman feeds failed; other Idaho feed items were national wire stories, opinion, or lacked article text (KTVB items had no text and could not be fetched: PROVENANCE_REQUIRED).
-- Huang/Nvidia leadership stories skipped as covered 2026-11-24/25; Ladybird alpha and Medicare open enrollment skipped as already covered.
+Edition 2026-11-27 (from feed data generated 2026-11-26T20:12Z; url_verified true).
+- Idaho is thin: 3 articles. Idaho Press and Idaho Statesman feeds failed; the rest of the Idaho feed items were national wire stories or lacked local news.
+- Tech is thin: 4 articles. Remaining feed items were shopping deals, reviews, or opinion.

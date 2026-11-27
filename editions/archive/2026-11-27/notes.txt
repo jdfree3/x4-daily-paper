@@ -1,0 +1,3 @@
+Edition 2026-11-27 (from feed data generated 2026-11-26T20:12Z; url_verified true).
+- Idaho is thin: 3 articles. Idaho Press and Idaho Statesman feeds failed; the rest of the Idaho feed items were national wire stories or lacked local news.
+- Tech is thin: 4 articles. Remaining feed items were shopping deals, reviews, or opinion.
